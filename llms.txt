@@ -1,6 +1,6 @@
-# BP Answer Engine Optimization Company LLC (BP AEO)
+# PickMe AI
 
-> BP AEO helps small businesses get recommended by AI assistants and AI shopping agents. When a customer asks ChatGPT, Claude, Google Gemini, Meta AI, Grok, Perplexity, or Meta's Muse "who should I buy from," we make sure the business is in the answer. Based in Boston, MA. A BP AI LLC company.
+> PickMe AI (operated by BP Answer Engine Optimization Company LLC) helps small businesses get recommended by AI assistants and AI shopping agents. When a customer asks ChatGPT, Claude, Google Gemini, Meta AI, Grok, Perplexity, or Meta's Muse "who should I buy from," we make sure the business is in the answer. Based in Boston, MA. A BP AI LLC company.
 
 ## What we do
 
@@ -27,7 +27,7 @@ Small and local businesses in the United States that want to be recommended when
 
 ## How to get started
 
-Book a free AI Visibility Check. On the call we show the owner what ChatGPT, Claude, and Gemini say today when customers ask about businesses like theirs.
+Book a free AI Visibility Check with PickMe AI. On the call we show the owner what ChatGPT, Claude, and Gemini say today when customers ask about businesses like theirs.
 
 - Booking: https://calendly.com/ben-peri3605/ai-visibility-check
 - Email: ben.peri3605@gmail.com
@@ -43,6 +43,7 @@ Book a free AI Visibility Check. On the call we show the owner what ChatGPT, Cla
 ## Company
 
 - Legal name: BP Answer Engine Optimization Company LLC
+- Brand name: PickMe AI
 - Short name: BP AEO
 - Parent company: BP AI LLC
 - Location: Boston, Massachusetts, USA
