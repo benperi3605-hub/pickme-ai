@@ -116,9 +116,9 @@ img, svg { max-width: 100%; }
   color: var(--accent); font-weight: 600;
 }
 .section-head .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--accent); border-radius: 1px; }
-.section { padding-block: clamp(72px, 10vw, 120px); }
+.section { padding-block: clamp(84px, 11vw, 144px); }
 .section--mist { background: var(--mist); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.section-head { display: grid; gap: 14px; max-width: 720px; margin-bottom: clamp(36px, 5vw, 56px); }
+.section-head { display: grid; gap: 14px; max-width: 720px; margin-bottom: clamp(40px, 5.5vw, 64px); }
 .section-head h2 { font-size: clamp(1.875rem, 3.6vw, 2.75rem); }
 .section-head p { color: var(--ink-2); max-width: 60ch; }
 
@@ -138,14 +138,6 @@ img, svg { max-width: 100%; }
 .btn--sm { min-height: 40px; padding: 8px 16px; font-size: 0.9375rem; }
 .btn svg { width: 16px; height: 16px; flex: none; transition: transform .15s ease; }
 .btn:hover svg { transform: translateX(2px); }
-
-.textlink {
-  display: inline-flex; align-items: center; gap: 6px;
-  min-height: 48px; padding: 4px 2px;
-  color: var(--on-dark); font-weight: 500; text-decoration: none;
-}
-.textlink span { border-bottom: 1px solid var(--navy-line); transition: border-color .15s ease; }
-.textlink:hover span { border-color: var(--on-dark); }
 
 /* Nav: tinted bar, section links always visible (two rows on phones, one row on desktop) */
 .nav {
@@ -217,15 +209,6 @@ img, svg { max-width: 100%; }
 .hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.375rem); letter-spacing: -0.04em; line-height: 1.02; max-width: 13ch; }
 .hero__sub { font-size: clamp(1.0625rem, 1.6vw, 1.25rem); color: var(--on-dark-2); max-width: 46ch; line-height: 1.55; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 8px; }
-.platforms { margin-top: 20px; display: grid; gap: 10px; }
-.platforms .eyebrow { color: var(--on-dark-2); }
-.platforms__list {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0;
-  list-style: none; margin: 0; padding: 0;
-  font-weight: 600; letter-spacing: -0.01em; color: var(--on-dark);
-}
-.platforms__list li { display: inline-flex; align-items: center; white-space: nowrap; }
-.platforms__list li + li::before { content: "·"; color: var(--on-dark-2); padding-inline: 8px; font-weight: 400; }
 
 /* Example AI answer card */
 .answer {
@@ -283,11 +266,7 @@ img, svg { max-width: 100%; }
   color: var(--accent); font-variant-numeric: tabular-nums;
 }
 .stat__label { font-size: 1.0625rem; line-height: 1.5; color: var(--ink); max-width: 30ch; }
-.stat__src { font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.5; color: var(--ink-3); }
-.stats__note {
-  margin-top: clamp(40px, 5vw, 56px); padding-top: 28px; border-top: 1px solid var(--line);
-  font-size: clamp(1.125rem, 2vw, 1.375rem); font-weight: 600; letter-spacing: -0.015em; color: var(--ink); max-width: 60ch;
-}
+.stats__src { margin-top: clamp(28px, 4vw, 40px); padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; color: var(--ink-3); }
 @media (min-width: 768px) {
   .stats__grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
   .stat + .stat { border-left: 1px solid var(--line); padding-left: 40px; }
@@ -307,8 +286,14 @@ img, svg { max-width: 100%; }
 }
 .step h3 { font-size: 1.375rem; letter-spacing: -0.02em; }
 .step p { color: var(--ink-2); }
-.step__tech { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-3); padding-top: 14px; border-top: 1px dashed var(--line); }
 @media (min-width: 900px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.gets-wrap { margin-top: clamp(28px, 4vw, 40px); padding: 24px 28px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); display: grid; gap: 14px; }
+.gets__title { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.gets { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px 32px; }
+.gets li { display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--ink); min-width: 0; }
+.gets svg { width: 18px; height: 18px; flex: none; color: var(--accent); }
+@media (min-width: 640px) { .gets { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .gets { grid-template-columns: repeat(3, 1fr); } }
 
 /* Compare */
 .compare { display: grid; gap: 20px; }
@@ -347,25 +332,10 @@ img, svg { max-width: 100%; }
 .way--new .way__verdict { color: #FFFFFF; border-top-color: var(--navy-line); }
 @media (min-width: 820px) { .compare { grid-template-columns: 1fr 1fr; gap: 24px; } }
 
-/* Platforms */
-.plat { display: grid; gap: 1px; list-style: none; margin: 0; padding: 0; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.plat li { background: var(--paper); padding: 22px 24px; display: grid; align-content: start; gap: 6px; min-width: 0; }
-.plat strong { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; }
-.plat span { color: var(--ink-2); font-size: 0.9375rem; line-height: 1.5; }
-.plat li.plat__more { background: var(--paper); }
-@media (min-width: 640px) { .plat { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .plat { grid-template-columns: repeat(4, 1fr); } }
-
-/* Deliverables */
-.gets { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 48px; }
-.gets li { display: grid; grid-template-columns: 24px 1fr; gap: 14px; padding-block: 18px; border-top: 1px solid var(--line); min-width: 0; }
-.gets svg { width: 20px; height: 20px; margin-top: 4px; color: var(--ink); }
-.gets small { display: block; color: var(--ink-3); font-size: 0.875rem; margin-top: 2px; }
-@media (min-width: 820px) {
-  .gets { grid-template-columns: 1fr 1fr; }
-  .gets li:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
-}
-@media (max-width: 819px) { .gets li:last-child { border-bottom: 1px solid var(--line); } }
+/* Platforms: name chips */
+.plat { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.plat li { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 12px 22px; font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
+.plat li.plat__more { background: transparent; border-style: dashed; color: var(--ink-3); font-weight: 500; }
 
 /* FAQ */
 .faq__layout { display: grid; gap: 32px; }
@@ -414,32 +384,6 @@ img, svg { max-width: 100%; }
 .footer__legal { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--navy-line); font-size: 0.8125rem; }
 @media (min-width: 768px) { .footer__top { grid-template-columns: 1.4fr 1fr 1fr; } }
 
-
-/* Try-it box inside the hero card */
-.tryit { display: grid; gap: 10px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--navy-line); }
-.tryit__title { font-weight: 600; color: #FFFFFF; font-size: 0.9375rem; letter-spacing: -0.01em; }
-.tryit__row { display: grid; gap: 8px; grid-template-columns: 1fr; }
-.tryit__field { display: grid; gap: 4px; min-width: 0; }
-.tryit__field span { font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
-.tryit__field input {
-  width: 100%; min-width: 0; min-height: 42px; padding: 8px 12px;
-  background: rgba(232,237,246,.06); border: 1px solid rgba(232,237,246,.18); border-radius: 8px;
-  color: #FFFFFF; font: 500 0.9375rem var(--font-sans);
-}
-.tryit__field input::placeholder { color: rgba(232,237,246,.4); }
-.tryit__field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.35); }
-.tryit__btn { width: 100%; min-height: 44px; }
-@media (min-width: 420px) { .tryit__row { grid-template-columns: 1.3fr 1fr 1fr; } }
-@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
-.tryit--shake { animation: shake .3s ease; }
-.pick--unknown { background: rgba(37,99,235,.14); border-color: rgba(96,165,250,.55); }
-.pick--unknown .pick__n { background: var(--accent); color: #FFFFFF; font-weight: 600; }
-.pick--unknown .pick__tag { border-color: #60A5FA; color: #93C5FD; }
-.answer__cta { margin-top: 16px; display: grid; gap: 10px; }
-.answer__cta[hidden] { display: none; }
-.answer__cta .btn { width: 100%; }
-.answer__cta-note { font-size: 0.8125rem; color: var(--on-dark-2); line-height: 1.5; }
-.answer--live .answer__q, .answer--live .answer__a, .answer--live .answer__foot { animation: rise .5s cubic-bezier(.2,.7,.2,1) both; }
 
 /* Who it's for strip */
 .fit { background: var(--paper); border-bottom: 1px solid var(--line); padding-block: 22px; }
@@ -518,27 +462,10 @@ img, svg { max-width: 100%; }
             Book a Free AI Visibility Check
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
           </a>
-          <a class="textlink" href="#how"><span>See how it works</span></a>
-        </div>
-        <div class="platforms">
-          <p class="eyebrow">We optimize for</p>
-          <ul class="platforms__list" aria-label="AI platforms we optimize for">
-            <li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>Meta AI</li><li>Grok</li><li>Perplexity</li><li>Muse</li>
-          </ul>
         </div>
       </div>
 
-      <div class="answer" id="tryit">
-        <form class="tryit" id="tryit-form" autocomplete="off" novalidate>
-          <p class="tryit__title">See what customers would ask AI about you</p>
-          <div class="tryit__row">
-            <label class="tryit__field"><span>Your business</span><input type="text" id="t-name" name="name" placeholder="Rosie's Bakery" maxlength="60" required></label>
-            <label class="tryit__field"><span>What you do</span><input type="text" id="t-type" name="type" placeholder="bakery" maxlength="40" required></label>
-            <label class="tryit__field"><span>City</span><input type="text" id="t-city" name="city" placeholder="Boston" maxlength="40" required></label>
-          </div>
-          <button class="btn tryit__btn" type="submit">Show me</button>
-        </form>
-
+      <div class="answer" id="example" aria-label="Example of an AI answer">
         <div class="answer__bar">
           <div class="answer__dots" aria-hidden="true"><span></span><span></span><span></span></div>
           <span class="answer__label" id="answer-label">Example AI answer</span>
@@ -565,13 +492,6 @@ img, svg { max-width: 100%; }
           </ol>
         </div>
         <p class="answer__foot" id="answer-foot">AI tools name two or three businesses. Our job is to make one of them yours.</p>
-        <div class="answer__cta" id="answer-cta" hidden>
-          <a class="btn" id="answer-book" href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>
-            Run my free check
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </a>
-          <span class="answer__cta-note">Free. We ask ChatGPT, Claude, and Gemini for real and show you the answers.</span>
-        </div>
       </div>
     </div>
   </section>
@@ -581,7 +501,7 @@ img, svg { max-width: 100%; }
     <div class="wrap fit__inner">
       <p class="fit__label">Built for local and small businesses</p>
       <ul class="fit__list">
-        <li>Restaurants</li><li>Bakeries</li><li>Salons</li><li>Dentists</li><li>Contractors</li><li>Plumbers</li><li>Law firms</li><li>Gyms</li><li>Retail shops</li><li>Real estate</li><li>Auto repair</li><li>Med spas</li>
+        <li>Restaurants</li><li>Bakeries</li><li>Salons</li><li>Dentists</li><li>Contractors</li><li>Plumbers</li><li>Law firms</li><li>Gyms</li><li>Retail shops</li><li>Real estate</li><li>Auto repair</li>
       </ul>
     </div>
   </section>
@@ -593,20 +513,17 @@ img, svg { max-width: 100%; }
         <li class="stat" data-reveal>
           <span class="stat__num">77%</span>
           <p class="stat__label">of U.S. consumers used AI to help with a shopping or purchase decision in the last six months</p>
-          <p class="stat__src">Source: Exploding Topics (Semrush) consumer survey, April 2026</p>
         </li>
         <li class="stat" data-reveal>
           <span class="stat__num">42%</span>
           <p class="stat__label">higher conversion from AI-referred shoppers than other traffic to U.S. retailers</p>
-          <p class="stat__src">Source: Adobe Analytics, March 2026</p>
         </li>
         <li class="stat" data-reveal>
           <span class="stat__num">#1</span>
           <p class="stat__label">Meta's Muse AI shopping agent hit #1 on the U.S. App Store within a week of launch</p>
-          <p class="stat__src">Source: CBS News and Fox Business, September 2026</p>
         </li>
       </ul>
-      <p class="stats__note">Customers who arrive through AI already know what they want. They buy faster.</p>
+      <p class="stats__src">Sources: Exploding Topics / Semrush consumer survey (Apr 2026) · Adobe Analytics (Mar 2026) · CBS News and Fox Business (Sep 2026)</p>
     </div>
   </section>
 
@@ -621,22 +538,30 @@ img, svg { max-width: 100%; }
         <li class="step" data-reveal>
           <span class="step__n" aria-hidden="true">1</span>
           <h3><span class="sr-step">Step 1: </span>Audit</h3>
-          <p>We check whether ChatGPT, Claude, and other AI tools currently mention your business, and who they recommend instead.</p>
-          <p class="step__tech">Real customer questions, asked across every major assistant</p>
+          <p>We check whether AI tools mention your business today, and who they name instead.</p>
         </li>
         <li class="step" data-reveal>
           <span class="step__n" aria-hidden="true">2</span>
           <h3><span class="sr-step">Step 2: </span>Build</h3>
-          <p>We optimize your existing website, or build you a new one, with the structured data, attributes, and content AI models read: business details, services, products, FAQs, reviews, and location.</p>
-          <p class="step__tech">schema.org/LocalBusiness · FAQPage · llms.txt</p>
+          <p>We upgrade or rebuild your website so AI can read it and recommend you.</p>
         </li>
         <li class="step" data-reveal>
           <span class="step__n" aria-hidden="true">3</span>
           <h3><span class="sr-step">Step 3: </span>Update daily</h3>
-          <p>AI search changes every day. We track what customers are asking AI in your category and update your site's attributes and content daily so you keep showing up.</p>
-          <p class="step__tech">Trending questions in, fresh answers out, every day</p>
+          <p>We track what customers ask AI in your category and keep your site current.</p>
         </li>
       </ol>
+      <div class="gets-wrap" data-reveal>
+        <p class="gets__title">What you get</p>
+        <ul class="gets" aria-label="What is included">
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>AI visibility audit</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Website upgraded or rebuilt for AI</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Daily updates to your content</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Monthly visibility report</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>One flat monthly fee, no contract</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>One point of contact</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -646,7 +571,6 @@ img, svg { max-width: 100%; }
       <div class="section-head">
         <p class="eyebrow">Why now</p>
         <h2 id="why-title">AI gives a short list. You need to be on it.</h2>
-        <p>Answer Engine Optimization (AEO) is the new SEO. It gets your business into the answers AI tools give, instead of a page of links.</p>
       </div>
       <div class="compare">
         <article class="way way--old" data-reveal aria-labelledby="old-title">
@@ -742,48 +666,26 @@ img, svg { max-width: 100%; }
       <div class="section-head">
         <p class="eyebrow">Platforms</p>
         <h2 id="platforms-title">Where your customers are asking.</h2>
-        <p>Each assistant finds and ranks businesses a little differently. We tune your site for all of them.</p>
       </div>
-      <ul class="plat">
-        <li data-reveal><strong>ChatGPT</strong><span>OpenAI's assistant. The one most of your customers already use.</span></li>
-        <li data-reveal><strong>Claude</strong><span>Anthropic's assistant, popular for research and side-by-side comparisons.</span></li>
-        <li data-reveal><strong>Gemini</strong><span>Google's assistant, built into Search, Android, and Chrome.</span></li>
-        <li data-reveal><strong>Meta AI</strong><span>Built into Facebook, Instagram, WhatsApp, and Messenger.</span></li>
-        <li data-reveal><strong>Grok</strong><span>xAI's assistant, built into X.</span></li>
-        <li data-reveal><strong>Perplexity</strong><span>An answer engine that cites the websites it pulls from.</span></li>
-        <li data-reveal><strong>Muse</strong><span>Meta's AI shopping agent. It can compare options and buy for the customer.</span></li>
-        <li class="plat__more" data-reveal><strong>What comes next</strong><span>New assistants launch often. Daily updates keep you ready for them.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- 6. What You Get -->
-  <section class="section" id="included" aria-labelledby="gets-title">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">What you get</p>
-        <h2 id="gets-title">Everything you need to show up in AI answers.</h2>
-        <p>One flat monthly fee. No setup charge, no long-term contract. The audit call is free either way.</p>
-      </div>
-      <ul class="gets">
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>AI visibility audit across major assistants</span></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Website built or upgraded for AI readability<small>Schema markup, clean structure, and an llms.txt file</small></span></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Business attributes and categories tuned to what customers actually ask</span></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Daily updates based on trending questions in your category</span></li>
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Monthly report: where you appear in AI answers and how that's changing</span></li>
-        <!-- Confirm this line matches your actual terms before launch -->
-        <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>One point of contact, no long-term contracts</span></li>
+      <ul class="plat" aria-label="AI platforms we optimize for">
+        <li data-reveal>ChatGPT</li>
+        <li data-reveal>Claude</li>
+        <li data-reveal>Gemini</li>
+        <li data-reveal>Meta AI</li>
+        <li data-reveal>Grok</li>
+        <li data-reveal>Perplexity</li>
+        <li data-reveal>Muse</li>
+        <li class="plat__more" data-reveal>+ what launches next</li>
       </ul>
     </div>
   </section>
 
   <!-- 7. FAQ -->
-  <section class="section section--mist" id="faq" aria-labelledby="faq-title">
+  <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="wrap faq__layout">
       <div class="section-head">
         <p class="eyebrow">FAQ</p>
         <h2 id="faq-title">Questions owners ask us.</h2>
-        <p>Have one that isn't here? Ask it on your free visibility check.</p>
       </div>
       <div class="faq">
         <details>
@@ -906,50 +808,22 @@ img, svg { max-width: 100%; }
     sections.forEach(function (s) { spy.observe(s); });
   }
 
-  // Try-it box: personalise the example card. Nothing is sent anywhere; it runs in the page.
-  var form = document.getElementById('tryit-form');
+  // Example answer card: rotate through a few sample businesses
   var examples = [
     ['bakery', 'Boston', 'bakeries', 'Custom cakes, same-day pickup'],
     ['dentist', 'Austin', 'dentists', 'Same-week appointments, accepts most insurance'],
     ['plumber', 'Denver', 'plumbers', '24/7 emergency service, upfront pricing'],
     ['hair salon', 'Chicago', 'hair salons', 'Online booking, walk-ins welcome']
   ];
-  var ex = 0, rotating = true;
-  function plural(t) { t = t.trim(); if (/s$/i.test(t)) return t; if (/y$/i.test(t) && !/[aeiou]y$/i.test(t)) return t.slice(0, -1) + 'ies'; return t + 's'; }
+  var ex = 0;
   function showExample(i) {
     var e = examples[i];
     document.getElementById('answer-q').textContent = "What's the best " + e[0] + ' in ' + e[1] + '?';
     document.getElementById('answer-intro').textContent = 'Here are three highly rated ' + e[2] + ' in ' + e[1] + ':';
     document.getElementById('pick-meta').textContent = '4.9 stars · Open now · ' + e[3];
   }
-  if (form) {
-    setInterval(function () { if (!rotating) return; ex = (ex + 1) % examples.length; showExample(ex); }, 4500);
-    form.addEventListener('input', function () { rotating = false; });
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      rotating = false;
-      var name = document.getElementById('t-name').value.trim();
-      var type = document.getElementById('t-type').value.trim().toLowerCase();
-      var city = document.getElementById('t-city').value.trim();
-      if (!name || !type || !city) { form.classList.add('tryit--shake'); setTimeout(function () { form.classList.remove('tryit--shake'); }, 500); return; }
-      var card = document.getElementById('tryit');
-      card.classList.add('answer--live');
-      document.getElementById('answer-label').textContent = 'What a customer might ask';
-      document.getElementById('answer-q').textContent = "What's the best " + type + ' in ' + city + '?';
-      document.getElementById('answer-intro').textContent = 'Here are three highly rated ' + plural(type) + ' in ' + city + ':';
-      var you = document.getElementById('pick-you');
-      you.classList.remove('pick--you'); you.classList.add('pick--unknown');
-      document.getElementById('pick-name').textContent = name;
-      document.getElementById('pick-tag').textContent = 'On the list?';
-      document.getElementById('pick-meta').textContent = 'We check this for real on your free call.';
-      document.getElementById('answer-foot').textContent = 'AI picks two or three ' + plural(type) + ' for every customer who asks. If ' + name + " isn't one of them, those customers go elsewhere.";
-      var cta = document.getElementById('answer-cta');
-      cta.hidden = false;
-      var book = document.getElementById('answer-book');
-      book.href = 'https://calendly.com/ben-peri3605/ai-visibility-check?a1=' + encodeURIComponent(name + ' (' + type + ', ' + city + ')');
-      book.target = '_blank'; book.rel = 'noopener';
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
+  if (document.getElementById('answer-q')) {
+    setInterval(function () { ex = (ex + 1) % examples.length; showExample(ex); }, 4500);
   }
 
   // Year
