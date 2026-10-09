@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<title>BP Answer Engine Optimization Company LLC</title>
-<meta name="description" content="BP AEO helps small businesses get recommended by ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and AI shopping agents like Muse. Book a free AI visibility check.">
-<meta property="og:title" content="BP AEO: Get your business recommended by AI">
+<title>PickMe AI</title>
+<meta name="description" content="PickMe AI helps small businesses get recommended by ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and AI shopping agents like Muse. Book a free AI visibility check.">
+<meta property="og:title" content="PickMe AI: Get your business recommended by AI">
 <meta property="og:description" content="When customers ask AI, be the answer.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#E7EDF6">
@@ -17,7 +17,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "BP Answer Engine Optimization Company LLC",
+  "name": "PickMe AI",
   "alternateName": "BP AEO",
   "legalName": "BP Answer Engine Optimization Company LLC",
   "description": "Answer Engine Optimization (AEO) for small businesses. We help businesses get recommended by ChatGPT, Claude, Google Gemini, Meta AI, Grok, Perplexity, and AI buying agents.",
@@ -155,7 +155,7 @@ img, svg { max-width: 100%; }
   display: grid; grid-template-columns: 1fr auto; align-items: center;
   column-gap: 12px; row-gap: 10px; padding-block: 10px 12px;
 }
-.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); white-space: nowrap; min-width: 0; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); white-space: nowrap; min-width: 0; overflow: hidden; }
 .logo__mark { width: 40px; height: 40px; flex: none; transition: transform .2s ease; }
 .logo:hover .logo__mark { transform: translateY(-1px) rotate(-3deg); }
 .logo__text { display: grid; line-height: 1.05; }
@@ -164,8 +164,8 @@ img, svg { max-width: 100%; }
 .footer__brand .logo__sub { color: var(--on-dark-2); }
 .nav__cta { grid-column: 2; grid-row: 1; min-height: 40px; padding-inline: 14px; white-space: nowrap; }
 .nav__primary { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
-.cta-long { display: none; }
-.cta-short { display: inline; }
+.cta-long, .sub-long { display: none; }
+.cta-short, .sub-short { display: inline; }
 .nav__links {
   display: flex; list-style: none; margin: 0; padding: 4px; gap: 4px; min-width: 0;
   background: rgba(255,255,255,.55); border: 1px solid #C9D3E2; border-radius: 999px;
@@ -179,7 +179,7 @@ img, svg { max-width: 100%; }
 }
 .nav__links a:hover { color: var(--ink); background: #FFFFFF; }
 .nav__links a.is-active { color: var(--accent); background: #FFFFFF; box-shadow: 0 1px 2px rgba(11,18,32,.08), inset 0 0 0 1px #C9D3E2; }
-@media (max-width: 349px) { .nav__links a { font-size: 0.75rem; padding-inline: 3px; } }
+@media (max-width: 359px) { .nav__links a { font-size: 0.75rem; padding-inline: 3px; } .logo__sub { display: none; } }
 @media (min-width: 420px) { .nav__links a { font-size: 0.875rem; padding-inline: 10px; } }
 
 @media (min-width: 900px) {
@@ -191,8 +191,8 @@ img, svg { max-width: 100%; }
   .nav__links li { flex: 0 0 auto; }
   .nav__links a { min-height: 0; padding: 8px 16px; font-size: 0.9375rem; }
   .nav__cta { grid-column: 3; padding-inline: 16px; }
-  .cta-long { display: inline; }
-  .cta-short { display: none; }
+  .cta-long, .sub-long { display: inline; }
+  .cta-short, .sub-short { display: none; }
 }
 
 /* Hero */
@@ -425,7 +425,7 @@ img, svg { max-width: 100%; }
 
 <header class="nav" id="top">
   <div class="wrap nav__inner">
-    <a class="logo" href="#top" aria-label="BP AEO Company, home">
+    <a class="logo" href="#top" aria-label="PickMe AI, home">
       <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
         <defs>
           <linearGradient id="bot-nav-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
@@ -453,7 +453,7 @@ img, svg { max-width: 100%; }
         <circle cx="14.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
         <circle cx="33.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
       </svg>
-      <span class="logo__text"><span class="logo__name">BP AEO</span><span class="logo__sub">Company</span></span>
+      <span class="logo__text"><span class="logo__name">PickMe AI</span><span class="logo__sub"><span class="sub-long">Answer Engine Optimization</span><span class="sub-short">AEO for small business</span></span></span>
     </a>
     <nav class="nav__primary" aria-label="Primary">
       <ul class="nav__links">
@@ -762,7 +762,7 @@ img, svg { max-width: 100%; }
   <div class="wrap">
     <div class="footer__top">
       <div class="footer__brand">
-        <a class="logo" href="#top" aria-label="BP AEO, back to top">
+        <a class="logo" href="#top" aria-label="PickMe AI, back to top">
       <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
         <defs>
           <linearGradient id="bot-foot-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
@@ -790,9 +790,9 @@ img, svg { max-width: 100%; }
         <circle cx="14.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
         <circle cx="33.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
       </svg>
-      <span class="logo__text"><span class="logo__name">BP AEO</span><span class="logo__sub">Company</span></span>
+      <span class="logo__text"><span class="logo__name">PickMe AI</span><span class="logo__sub"><span class="sub-long">Answer Engine Optimization</span><span class="sub-short">AEO for small business</span></span></span>
     </a>
-        <p>BP Answer Engine Optimization Company LLC, a BP AI LLC company, based in Boston, MA.</p>
+        <p>PickMe AI is a service of BP Answer Engine Optimization Company LLC, a BP AI LLC company, based in Boston, MA.</p>
       </div>
       <div>
         <strong style="display:block;color:var(--on-dark);font-weight:600;margin-bottom:4px">Contact</strong>
@@ -803,7 +803,7 @@ img, svg { max-width: 100%; }
         <a href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>Book a free AI visibility check</a>
       </div>
     </div>
-    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC. All rights reserved. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. BP AEO is not affiliated with them.</p>
+    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC. All rights reserved. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
   </div>
 </footer>
 
