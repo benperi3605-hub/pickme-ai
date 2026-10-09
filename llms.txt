@@ -14,7 +14,7 @@ Our service has three parts:
 
 ## Who it is for
 
-Small and local businesses in the United States that want to be recommended when customers ask AI tools for a suggestion. Examples: restaurants, bakeries, salons, contractors, dentists, law firms, fitness studios, retail shops, and professional services.
+Small and local businesses in the United States that want to be recommended when customers ask AI tools for a suggestion. Examples: restaurants, bakeries, salons, dentists, contractors, plumbers, law firms, gyms, retail shops, real estate, auto repair, med spas, and other professional services.
 
 ## Deliverables
 
@@ -29,6 +29,7 @@ Small and local businesses in the United States that want to be recommended when
 
 Book a free AI Visibility Check with PickMe AI. On the call we show the owner what ChatGPT, Claude, and Gemini say today when customers ask about businesses like theirs.
 
+- Website: https://pickme-ai.com/
 - Booking: https://calendly.com/ben-peri3605/ai-visibility-check
 - Email: ben.peri3605@gmail.com
 
@@ -38,6 +39,7 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 - Is this different from SEO? Yes, and they work together. SEO ranks you in a list of links. AEO gets you named in the AI's answer. Most AEO work also helps Google ranking.
 - Do I need a new website? Not always. A site in good shape is upgraded in place. A slow or outdated site is rebuilt.
 - Can you guarantee a business will show up on ChatGPT? No one can guarantee what an AI says. We build and maintain the site to give the strongest possible chance and report results monthly.
+- What does it cost? A flat monthly fee, month to month, cancel any time. Quoted on the free call after reviewing the site. The audit and call are free.
 - How fast will results show? Site changes go live in the first few weeks. Each AI platform refreshes on its own schedule. The monthly report shows where things stand.
 
 ## Company
@@ -48,7 +50,6 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 - Parent company: BP AI LLC
 - Location: Boston, Massachusetts, USA
 - Contact: ben.peri3605@gmail.com
-- Website: https://pickme-ai.com/
 
 ## Pages
 
