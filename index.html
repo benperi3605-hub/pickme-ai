@@ -9,7 +9,7 @@
 <meta property="og:title" content="PickMe AI: Get your business recommended by AI">
 <meta property="og:description" content="When customers ask AI, be the answer.">
 <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pickme-ai.com/">
+<meta property="og:url" content="https://pickme-ai.com/">
 <link rel="canonical" href="https://pickme-ai.com/">
 <meta name="theme-color" content="#E7EDF6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,6 +41,7 @@
     { "@type": "Question", "name": "Is this different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and the two work together. SEO helps you rank in a list of links. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking." } },
     { "@type": "Question", "name": "Do I need a new website?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. If your current site is in good shape, we upgrade it in place. If it is slow, outdated, or hard to edit, we build you a new one. The free audit tells us which." } },
     { "@type": "Question", "name": "Can you guarantee I'll show up on ChatGPT?", "acceptedAnswer": { "@type": "Answer", "text": "No one can guarantee what an AI says. We build and maintain your site to give you the strongest possible chance, and we show you the results every month." } },
+    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "A flat monthly fee, month to month, that you can cancel any time. The amount depends on whether your current site needs a tune-up or a rebuild, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing." } },
     { "@type": "Question", "name": "How fast will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Site changes go live in the first few weeks. Each AI platform refreshes what it knows on its own schedule, so some pick up changes faster than others. Your monthly report shows exactly where you stand." } }
   ]
 }
@@ -211,7 +212,7 @@ img, svg { max-width: 100%; }
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 30%, transparent 75%);
   mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 30%, transparent 75%);
 }
-.hero__grid { position: relative; display: grid; gap: 56px; align-items: center; }
+.hero__grid { position: relative; display: grid; gap: 40px; align-items: start; }
 .hero__copy { display: grid; gap: 24px; min-width: 0; }
 .hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.375rem); letter-spacing: -0.04em; line-height: 1.02; max-width: 13ch; }
 .hero__sub { font-size: clamp(1.0625rem, 1.6vw, 1.25rem); color: var(--on-dark-2); max-width: 46ch; line-height: 1.55; }
@@ -413,6 +414,40 @@ img, svg { max-width: 100%; }
 .footer__legal { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--navy-line); font-size: 0.8125rem; }
 @media (min-width: 768px) { .footer__top { grid-template-columns: 1.4fr 1fr 1fr; } }
 
+
+/* Try-it box inside the hero card */
+.tryit { display: grid; gap: 10px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid var(--navy-line); }
+.tryit__title { font-weight: 600; color: #FFFFFF; font-size: 0.9375rem; letter-spacing: -0.01em; }
+.tryit__row { display: grid; gap: 8px; grid-template-columns: 1fr; }
+.tryit__field { display: grid; gap: 4px; min-width: 0; }
+.tryit__field span { font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+.tryit__field input {
+  width: 100%; min-width: 0; min-height: 42px; padding: 8px 12px;
+  background: rgba(232,237,246,.06); border: 1px solid rgba(232,237,246,.18); border-radius: 8px;
+  color: #FFFFFF; font: 500 0.9375rem var(--font-sans);
+}
+.tryit__field input::placeholder { color: rgba(232,237,246,.4); }
+.tryit__field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,.35); }
+.tryit__btn { width: 100%; min-height: 44px; }
+@media (min-width: 420px) { .tryit__row { grid-template-columns: 1.3fr 1fr 1fr; } }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+.tryit--shake { animation: shake .3s ease; }
+.pick--unknown { background: rgba(37,99,235,.14); border-color: rgba(96,165,250,.55); }
+.pick--unknown .pick__n { background: var(--accent); color: #FFFFFF; font-weight: 600; }
+.pick--unknown .pick__tag { border-color: #60A5FA; color: #93C5FD; }
+.answer__cta { margin-top: 16px; display: grid; gap: 10px; }
+.answer__cta[hidden] { display: none; }
+.answer__cta .btn { width: 100%; }
+.answer__cta-note { font-size: 0.8125rem; color: var(--on-dark-2); line-height: 1.5; }
+.answer--live .answer__q, .answer--live .answer__a, .answer--live .answer__foot { animation: rise .5s cubic-bezier(.2,.7,.2,1) both; }
+
+/* Who it's for strip */
+.fit { background: var(--paper); border-bottom: 1px solid var(--line); padding-block: 22px; }
+.fit__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.fit__label { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+.fit__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.fit__list li { font-size: 0.875rem; font-weight: 500; color: var(--ink-2); padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--mist); white-space: nowrap; }
+
 /* Scroll reveal: elements stay visible at rest; motion plays only as they arrive */
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .is-in { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
@@ -493,20 +528,30 @@ img, svg { max-width: 100%; }
         </div>
       </div>
 
-      <figure class="answer" aria-label="Example of an AI assistant recommending your business">
+      <div class="answer" id="tryit">
+        <form class="tryit" id="tryit-form" autocomplete="off" novalidate>
+          <p class="tryit__title">See what customers would ask AI about you</p>
+          <div class="tryit__row">
+            <label class="tryit__field"><span>Your business</span><input type="text" id="t-name" name="name" placeholder="Rosie's Bakery" maxlength="60" required></label>
+            <label class="tryit__field"><span>What you do</span><input type="text" id="t-type" name="type" placeholder="bakery" maxlength="40" required></label>
+            <label class="tryit__field"><span>City</span><input type="text" id="t-city" name="city" placeholder="Boston" maxlength="40" required></label>
+          </div>
+          <button class="btn tryit__btn" type="submit">Show me</button>
+        </form>
+
         <div class="answer__bar">
           <div class="answer__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          <span class="answer__label">Example AI answer</span>
+          <span class="answer__label" id="answer-label">Example AI answer</span>
         </div>
-        <p class="answer__q">What's the best bakery near me?</p>
-        <div class="answer__a">
-          <p class="answer__intro">Here are three highly rated bakeries close to you:</p>
+        <p class="answer__q" id="answer-q" aria-live="polite">What's the best bakery in Boston?</p>
+        <div class="answer__a" id="answer-a" aria-live="polite">
+          <p class="answer__intro" id="answer-intro">Here are three highly rated bakeries in Boston:</p>
           <ol class="answer__list">
-            <li class="pick pick--you">
+            <li class="pick pick--you" id="pick-you">
               <span class="pick__n">1</span>
               <div>
-                <div class="pick__name">Your Business <span class="pick__tag">Recommended</span></div>
-                <div class="pick__meta">4.9 stars · Open now · Custom cakes, same-day pickup</div>
+                <div class="pick__name"><span id="pick-name">Your Business</span> <span class="pick__tag" id="pick-tag">Recommended</span></div>
+                <div class="pick__meta" id="pick-meta">4.9 stars · Open now · Custom cakes, same-day pickup</div>
               </div>
             </li>
             <li class="pick" aria-label="Another business">
@@ -519,8 +564,25 @@ img, svg { max-width: 100%; }
             </li>
           </ol>
         </div>
-        <figcaption class="answer__foot">AI tools name two or three businesses. Our job is to make one of them yours.</figcaption>
-      </figure>
+        <p class="answer__foot" id="answer-foot">AI tools name two or three businesses. Our job is to make one of them yours.</p>
+        <div class="answer__cta" id="answer-cta" hidden>
+          <a class="btn" id="answer-book" href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>
+            Run my free check
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <span class="answer__cta-note">Free. We ask ChatGPT, Claude, and Gemini for real and show you the answers.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section class="fit" aria-label="Who PickMe AI is for">
+    <div class="wrap fit__inner">
+      <p class="fit__label">Built for local and small businesses</p>
+      <ul class="fit__list">
+        <li>Restaurants</li><li>Bakeries</li><li>Salons</li><li>Dentists</li><li>Contractors</li><li>Plumbers</li><li>Law firms</li><li>Gyms</li><li>Retail shops</li><li>Real estate</li><li>Auto repair</li><li>Med spas</li>
+      </ul>
     </div>
   </section>
 
@@ -701,6 +763,7 @@ img, svg { max-width: 100%; }
       <div class="section-head">
         <p class="eyebrow">What you get</p>
         <h2 id="gets-title">Everything you need to show up in AI answers.</h2>
+        <p>One flat monthly fee. No setup charge, no long-term contract. The audit call is free either way.</p>
       </div>
       <ul class="gets">
         <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>AI visibility audit across major assistants</span></li>
@@ -738,6 +801,10 @@ img, svg { max-width: 100%; }
         <details>
           <summary>Can you guarantee I'll show up on ChatGPT?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
           <p class="faq__a">No one can guarantee what an AI says. We build and maintain your site to give you the strongest possible chance, and we show you the results every month.</p>
+        </details>
+        <details>
+          <summary>What does it cost?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">A flat monthly fee, month to month, that you can cancel any time. The amount depends on whether your current site needs a tune-up or a rebuild, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing, and you'll know the number before you decide.</p>
         </details>
         <details>
           <summary>How fast will I see results?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
@@ -837,6 +904,52 @@ img, svg { max-width: 100%; }
       if (window.scrollY < 200) setActive('');
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
     sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  // Try-it box: personalise the example card. Nothing is sent anywhere; it runs in the page.
+  var form = document.getElementById('tryit-form');
+  var examples = [
+    ['bakery', 'Boston', 'bakeries', 'Custom cakes, same-day pickup'],
+    ['dentist', 'Austin', 'dentists', 'Same-week appointments, accepts most insurance'],
+    ['plumber', 'Denver', 'plumbers', '24/7 emergency service, upfront pricing'],
+    ['hair salon', 'Chicago', 'hair salons', 'Online booking, walk-ins welcome']
+  ];
+  var ex = 0, rotating = true;
+  function plural(t) { t = t.trim(); if (/s$/i.test(t)) return t; if (/y$/i.test(t) && !/[aeiou]y$/i.test(t)) return t.slice(0, -1) + 'ies'; return t + 's'; }
+  function showExample(i) {
+    var e = examples[i];
+    document.getElementById('answer-q').textContent = "What's the best " + e[0] + ' in ' + e[1] + '?';
+    document.getElementById('answer-intro').textContent = 'Here are three highly rated ' + e[2] + ' in ' + e[1] + ':';
+    document.getElementById('pick-meta').textContent = '4.9 stars · Open now · ' + e[3];
+  }
+  if (form) {
+    setInterval(function () { if (!rotating) return; ex = (ex + 1) % examples.length; showExample(ex); }, 4500);
+    form.addEventListener('input', function () { rotating = false; });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      rotating = false;
+      var name = document.getElementById('t-name').value.trim();
+      var type = document.getElementById('t-type').value.trim().toLowerCase();
+      var city = document.getElementById('t-city').value.trim();
+      if (!name || !type || !city) { form.classList.add('tryit--shake'); setTimeout(function () { form.classList.remove('tryit--shake'); }, 500); return; }
+      var card = document.getElementById('tryit');
+      card.classList.add('answer--live');
+      document.getElementById('answer-label').textContent = 'What a customer might ask';
+      document.getElementById('answer-q').textContent = "What's the best " + type + ' in ' + city + '?';
+      document.getElementById('answer-intro').textContent = 'Here are three highly rated ' + plural(type) + ' in ' + city + ':';
+      var you = document.getElementById('pick-you');
+      you.classList.remove('pick--you'); you.classList.add('pick--unknown');
+      document.getElementById('pick-name').textContent = name;
+      document.getElementById('pick-tag').textContent = 'On the list?';
+      document.getElementById('pick-meta').textContent = 'We check this for real on your free call.';
+      document.getElementById('answer-foot').textContent = 'AI picks two or three ' + plural(type) + ' for every customer who asks. If ' + name + " isn't one of them, those customers go elsewhere.";
+      var cta = document.getElementById('answer-cta');
+      cta.hidden = false;
+      var book = document.getElementById('answer-book');
+      book.href = 'https://calendly.com/ben-peri3605/ai-visibility-check?a1=' + encodeURIComponent(name + ' (' + type + ', ' + city + ')');
+      book.target = '_blank'; book.rel = 'noopener';
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
   }
 
   // Year
