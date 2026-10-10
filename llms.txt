@@ -14,7 +14,7 @@ Our service has three parts:
 
 ## Who it is for
 
-Small and local businesses in the United States that want to be recommended when customers ask AI tools for a suggestion. Examples: restaurants, bakeries, salons, dentists, contractors, plumbers, law firms, gyms, retail shops, real estate, auto repair, med spas, and other professional services.
+Small businesses in the United States that want to be recommended when customers ask AI tools for a suggestion. Any business whose customers might ask an AI assistant who to buy from or hire can benefit, from local service businesses and shops to professional services and online brands.
 
 ## Deliverables
 
@@ -62,4 +62,4 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 
 ## Optional
 
-- Stats cited on the site: 77% of U.S. consumers used AI to help with a shopping or purchase decision in the last six months (Exploding Topics / Semrush, April 2026); AI-referred traffic to U.S. retailers converted 42% better than other traffic (Adobe Analytics, March 2026); Meta's Muse AI shopping agent reached #1 on the U.S. App Store within a week of launch (September 2026).
+- Stats cited on the site: 96% of companies are invisible in AI-driven buyer discovery, appearing only when the buyer already knows the brand (2X AI Visibility Index, April 2026); 77% of U.S. consumers used AI to help with a shopping or purchase decision in the last six months (Exploding Topics / Semrush, April 2026); AI-referred traffic to U.S. retailers converted 42% better than other traffic (Adobe Analytics, March 2026); Meta's Muse AI shopping agent reached #1 on the U.S. App Store within a week of launch (September 2026).
