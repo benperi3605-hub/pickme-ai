@@ -28,6 +28,7 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" },
   "areaServed": "US",
   "parentOrganization": { "@type": "Organization", "name": "BP AI LLC" },
+  "founder": { "@type": "Person", "name": "Ben Peri", "jobTitle": "Founder", "sameAs": "https://www.linkedin.com/in/benperi" },
   "knowsAbout": ["Answer Engine Optimization", "Generative Engine Optimization", "Schema markup", "llms.txt", "AI search visibility"],
   "makesOffer": { "@type": "Offer", "name": "Free AI Visibility Check", "price": "0", "priceCurrency": "USD", "url": "https://calendly.com/ben-peri3605/ai-visibility-check" }
 }
@@ -37,11 +38,11 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "What is Answer Engine Optimization?", "acceptedAnswer": { "@type": "Answer", "text": "Answer Engine Optimization (AEO) is the work of making your business easy for AI assistants to find, understand, and recommend. When someone asks ChatGPT for the best bakery nearby, AEO is what puts your name in the reply." } },
-    { "@type": "Question", "name": "Is this different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and the two work together. SEO helps you rank in a list of links. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking." } },
-    { "@type": "Question", "name": "Do I need a new website?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. If your current site is in good shape, we upgrade it in place. If it is slow, outdated, or hard to edit, we build you a new one. The free audit tells us which." } },
+    { "@type": "Question", "name": "What is Answer Engine Optimization?", "acceptedAnswer": { "@type": "Answer", "text": "Answer Engine Optimization (AEO) is the work of making your business easy for AI assistants to find, understand, and recommend. When someone asks ChatGPT for the best bakery nearby, AEO is what puts your business name in the reply." } },
+    { "@type": "Question", "name": "Is this different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and the two work together. SEO helps you rank in the list of links on Google. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking." } },
+    { "@type": "Question", "name": "Do I need a new website?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. We build on your existing website whenever we can. If it is slow, outdated, or hard to edit, we build you a new one. The free audit tells us which." } },
     { "@type": "Question", "name": "Can you guarantee I'll show up on ChatGPT?", "acceptedAnswer": { "@type": "Answer", "text": "No one can guarantee what an AI says. We build and maintain your site to give you the strongest possible chance, and we show you the results every month." } },
-    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "A flat monthly fee, month to month, that you can cancel any time. The amount depends on whether your current site needs a tune-up or a rebuild, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing." } },
+    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "A flat monthly fee, month to month, that you can cancel any time. The amount depends on how much work your current site needs, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing." } },
     { "@type": "Question", "name": "How fast will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Site changes go live in the first few weeks. Each AI platform refreshes what it knows on its own schedule, so some pick up changes faster than others. Your monthly report shows exactly where you stand." } }
   ]
 }
@@ -373,7 +374,28 @@ img, svg { max-width: 100%; }
   -webkit-mask-image: radial-gradient(ellipse 60% 90% at 85% 50%, #000 20%, transparent 70%);
   mask-image: radial-gradient(ellipse 60% 90% at 85% 50%, #000 20%, transparent 70%);
 }
-.cta__inner { position: relative; display: grid; gap: 28px; justify-items: start; }
+.cta .wrap { position: relative; display: grid; gap: clamp(40px, 6vw, 64px); }
+.cta__inner { display: grid; gap: 28px; justify-items: start; }
+.contact { display: grid; gap: 16px; }
+.founder, .contact__card { background: rgba(232,237,246,.05); border: 1px solid var(--navy-line); border-radius: 16px; padding: 24px; min-width: 0; }
+.founder { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start; }
+.founder__avatar { width: 88px; height: 88px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(180deg, #3B82F6, #1D4ED8); color: #FFFFFF; font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; overflow: hidden; }
+.founder__avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.founder__body { display: grid; gap: 6px; min-width: 0; }
+.founder__eyebrow { font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+.founder__name { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; color: #FFFFFF; }
+.founder__bio { font-size: 0.9375rem; line-height: 1.55; color: var(--on-dark-2); }
+.founder__link { justify-self: start; display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; min-height: 40px; padding: 8px 14px; border-radius: 8px; border: 1px solid rgba(232,237,246,.25); color: #FFFFFF; font-weight: 600; font-size: 0.9375rem; text-decoration: none; transition: background-color .15s ease, border-color .15s ease; }
+.founder__link:hover { background: rgba(232,237,246,.08); border-color: rgba(232,237,246,.5); }
+.founder__link svg { width: 18px; height: 18px; flex: none; }
+.contact__card { display: grid; gap: 14px; align-content: start; }
+.contact__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.contact__list li { display: grid; gap: 2px; font-size: 0.875rem; color: var(--on-dark); min-width: 0; overflow-wrap: anywhere; }
+.contact__list a { color: #FFFFFF; text-decoration: none; border-bottom: 1px solid rgba(232,237,246,.3); width: fit-content; }
+.contact__list a:hover { border-color: #FFFFFF; }
+.contact__k { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+@media (min-width: 560px) { .contact__list { grid-template-columns: minmax(0, 1.6fr) 1fr 1fr; gap: 16px; } }
+@media (min-width: 1000px) { .cta .wrap { grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: 72px; } }
 .cta h2 { font-size: clamp(2rem, 4.6vw, 3.25rem); letter-spacing: -0.04em; max-width: 16ch; }
 .cta p { color: var(--on-dark-2); max-width: 52ch; }
 
@@ -537,7 +559,7 @@ img, svg { max-width: 100%; }
         <li class="step" data-reveal>
           <span class="step__n" aria-hidden="true">2</span>
           <h3><span class="sr-step">Step 2: </span>Build</h3>
-          <p>We upgrade or rebuild your website so AI can read it and recommend you.</p>
+          <p>We build on your existing website so AI can read it and recommend you.</p>
         </li>
         <li class="step" data-reveal>
           <span class="step__n" aria-hidden="true">3</span>
@@ -549,7 +571,7 @@ img, svg { max-width: 100%; }
         <p class="gets__title">What you get</p>
         <ul class="gets" aria-label="What is included">
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>AI visibility audit</span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Website upgraded or rebuilt for AI</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Your existing site, built up for AI</span></li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Daily updates to your content</span></li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>Monthly visibility report</span></li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span>One flat monthly fee, no contract</span></li>
@@ -684,15 +706,15 @@ img, svg { max-width: 100%; }
       <div class="faq">
         <details>
           <summary>What is Answer Engine Optimization?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">Answer Engine Optimization (AEO) is the work of making your business easy for AI assistants to find, understand, and recommend. When someone asks ChatGPT for the best bakery nearby, AEO is what puts your name in the reply.</p>
+          <p class="faq__a">Answer Engine Optimization (AEO) is the work of making your business easy for AI assistants to find, understand, and recommend. When someone asks ChatGPT for the best bakery nearby, AEO is what puts your business name in the reply.</p>
         </details>
         <details>
           <summary>Is this different from SEO?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">Yes, and the two work together. SEO helps you rank in a list of links. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking.</p>
+          <p class="faq__a">Yes, and the two work together. SEO helps you rank in the list of links on Google. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking.</p>
         </details>
         <details>
           <summary>Do I need a new website?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">Not always. If your current site is in good shape, we upgrade it in place. If it's slow, outdated, or hard to edit, we build you a new one. The free audit tells us which.</p>
+          <p class="faq__a">Not always. We build on your existing website whenever we can. If it's slow, outdated, or hard to edit, we build you a new one. The free audit tells us which.</p>
         </details>
         <details>
           <summary>Can you guarantee I'll show up on ChatGPT?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
@@ -700,7 +722,7 @@ img, svg { max-width: 100%; }
         </details>
         <details>
           <summary>What does it cost?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">A flat monthly fee, month to month, that you can cancel any time. The amount depends on whether your current site needs a tune-up or a rebuild, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing, and you'll know the number before you decide.</p>
+          <p class="faq__a">A flat monthly fee, month to month, that you can cancel any time. The amount depends on how much work your current site needs, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing, and you'll know the number before you decide.</p>
         </details>
         <details>
           <summary>How fast will I see results?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
@@ -710,15 +732,39 @@ img, svg { max-width: 100%; }
     </div>
   </section>
 
-  <!-- 8. Final CTA -->
-  <section class="cta" id="book" aria-labelledby="cta-title">
-    <div class="wrap cta__inner">
-      <h2 id="cta-title">Find out if AI recommends your business.</h2>
-      <p>On a free call, we'll show you what ChatGPT, Claude, and Gemini say when customers ask about businesses like yours.</p>
-      <a class="btn" href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>
-        Book a Free AI Visibility Check
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
+  <!-- 8. Contact + founder -->
+  <section class="cta" id="contact" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="cta__inner">
+        <h2 id="cta-title">Find out if AI recommends your business.</h2>
+        <p>On a free call, we'll show you what ChatGPT, Claude, and Gemini say when customers ask about businesses like yours.</p>
+        <a class="btn" href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>
+          Book a Free AI Visibility Check
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="contact" data-reveal>
+        <div class="founder">
+          <div class="founder__avatar"><img src="data:image/jpeg;base64,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" alt="Ben Peri, founder of PickMe AI" width="88" height="88"></div>
+          <div class="founder__body">
+            <p class="founder__eyebrow">Founder</p>
+            <p class="founder__name">Ben Peri</p>
+            <p class="founder__bio">I build websites for small businesses in Boston and handle every PickMe AI client myself, start to finish. You'll always be talking to me.</p>
+            <a class="founder__link" href="https://www.linkedin.com/in/benperi" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="contact__card">
+          <p class="founder__eyebrow">Contact us</p>
+          <ul class="contact__list">
+            <li><span class="contact__k">Email</span><a href="mailto:ben.peri3605@gmail.com">ben.peri3605@gmail.com</a></li>
+            <li><span class="contact__k">Schedule</span><a href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>Book a free info call</a></li>
+            <li><span class="contact__k">Based in</span><span>Boston, MA · serving the U.S.</span></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -766,7 +812,8 @@ img, svg { max-width: 100%; }
       </div>
       <div>
         <strong style="display:block;color:var(--on-dark);font-weight:600;margin-bottom:4px">Get started</strong>
-        <a href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>Book a free AI visibility check</a>
+        <a href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>Book a free AI visibility check</a><br>
+        <a href="#contact">Contact us</a>
       </div>
     </div>
     <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC. All rights reserved. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
