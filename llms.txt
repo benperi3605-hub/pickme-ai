@@ -9,7 +9,7 @@ Answer Engine Optimization (AEO) is the work of making a business easy for AI mo
 Our service has three parts:
 
 1. Audit: We check whether ChatGPT, Claude, and other AI tools currently mention the business, and who they recommend instead.
-2. Build: We build on the existing website, or build a new one when needed, with the structured data, attributes, and content AI models read: business details, services, products, FAQs, reviews, and location. This includes schema.org markup, clean page structure, and an llms.txt file.
+2. Build: We build onto the existing website, or build a new one if the business does not have one, with the structured data, attributes, and content AI models read: business details, services, products, FAQs, reviews, and location. This includes schema.org markup, clean page structure, and an llms.txt file.
 3. Update daily: We track what customers are asking AI in the business's category and update the site's attributes and content daily so it keeps showing up.
 
 ## Who it is for
@@ -19,7 +19,7 @@ Small businesses in the United States that want to be recommended when customers
 ## Deliverables
 
 - AI visibility audit across major assistants (ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, Muse)
-- Existing website built up for AI readability: schema markup, clean structure, llms.txt
+- Website built onto for AI readability (or built new if needed): schema markup, clean structure, llms.txt
 - Business attributes and categories tuned to what customers actually ask
 - Daily updates based on trending questions in the business's category
 - Monthly report showing where the business appears in AI answers and how that is changing
@@ -37,7 +37,7 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 
 - What is Answer Engine Optimization? Making a business easy for AI assistants to find, understand, and recommend.
 - Is this different from SEO? Yes, and they work together. SEO ranks you in the list of links on Google. AEO gets you named in the AI's answer. Most AEO work also helps Google ranking.
-- Do I need a new website? Not always. We build on the existing website whenever we can. A slow or outdated site is rebuilt.
+- Do I need a new website? Not always. We build onto the existing website whenever we can. A slow or outdated site, or a business with no site yet, gets a new one.
 - Can you guarantee a business will show up on ChatGPT? No one can guarantee what an AI says. We build and maintain the site to give the strongest possible chance and report results monthly.
 - What does it cost? A flat monthly fee, month to month, cancel any time. Quoted on the free call after reviewing the site. The audit and call are free.
 - How fast will results show? Site changes go live in the first few weeks. Each AI platform refreshes on its own schedule. The monthly report shows where things stand.
