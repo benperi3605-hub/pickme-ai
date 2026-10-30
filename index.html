@@ -3,6 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Google tag (gtag.js): Google Analytics 4, property pickme-ai.com. Counts visits by source (ChatGPT, Gemini, Perplexity, Claude… show up as referrers)
+     and two lead events: a click on "Book a Free AI Visibility Check" (Calendly) and a click on the email address. No personal data is collected. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T188K5BE37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T188K5BE37');
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('calendly.com') !== -1) gtag('event', 'generate_lead', {lead_type: 'book_free_check', link_url: h});
+    else if (h.indexOf('mailto:') === 0) gtag('event', 'generate_lead', {lead_type: 'email_click', link_url: h});
+  }, true);
+</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>PickMe AI</title>
 <meta name="description" content="PickMe AI helps small businesses get recommended by ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and AI shopping agents like Muse. Book a free AI visibility check.">
