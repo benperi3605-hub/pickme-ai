@@ -53,16 +53,22 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 - [FAQ](https://pickme-ai.com/#faq)
 - Email: ben.peri3605@gmail.com
 - Phone: 513-550-0184
+- Phone: 513-550-0184
 
 ## Frequently asked questions
 
-- What is Answer Engine Optimization? Making a business easy for AI assistants to find, understand, and recommend.
-- Is this different from SEO? Yes, and they work together. SEO ranks you in the list of links on Google. AEO gets you named in the AI's answer. Most AEO work also helps Google ranking.
-- How much does it cost? Artisan $250 a month; Pro $999 a month; the AI visibility check is free.
-- Do you guarantee your work? Yes: a 90-day money-back guarantee if AI visibility has not improved and you are not gaining customers through AI referrals.
-- Do I need a new website? Not always. We build onto the existing website whenever we can.
-- How fast will I see results? Site changes go live in the first few weeks; each AI platform refreshes on its own schedule; the monthly report shows where you stand.
-- Where are you? Boston, Massachusetts; clients in Cincinnati, Ohio; remote across the United States.
-- Hours? Monday to Sunday, 9 AM to 5 PM Eastern. No appointment needed.
-- How do I pay? Cash, credit card, debit card, bank wire, Apple Pay, payment plan.
-- Who owns PickMe AI? Ben Peri, founder; opened 2026; locally owned Boston startup.
+- What is Answer Engine Optimization (AEO)? AEO is the work of making your business easy for AI assistants to find, understand, and recommend. When a customer asks ChatGPT for the best option nearby, AEO is what puts your name in the answer.
+- How is AEO different from SEO? SEO earns you a spot in a list of links. AEO earns you a mention in the answer itself, which usually names only two or three businesses. The two work together, and most AEO work lifts your Google ranking as well.
+- How much does it cost? Two plans: Artisan at $250 a month and Pro at $999 a month. The AI visibility check that starts the process is free.
+- What is the Artisan plan? Artisan is $250 a month. Each month we run 50 customer questions from your category across the major AI platforms (ChatGPT, Gemini, Perplexity and others) to see where you are named, and we update your site's attributes, schema and text files daily so you stay at the top of the list.
+- What is the Pro plan? Pro is $999 a month. We run 150+ customer questions per week as a continuous AI visibility check, update the website constantly so you hold the number one spot in AI answers, track the revenue AI referrals bring you, and take a 10% share of that AI-referred revenue after the first 90 days.
+- What is included in the free AI visibility check? A free, no-obligation assessment that shows exactly where you do and do not appear on ChatGPT, Gemini, Claude, Perplexity and other AI tools, and the fixes that close each gap: schema, text files, the knowledge graph and your business attributes. We refresh it weekly.
+- Do you guarantee results? Yes. If your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of your money back.
+- Do I need a new website? Usually not. We build onto your existing site whenever we can. If it is slow, outdated, hard to edit, or does not exist yet, we build one. The free check tells us which.
+- How fast will I see results? Site changes go live within the first few weeks. Each AI platform refreshes its knowledge on its own schedule, so some pick up the changes sooner than others. Your monthly report shows exactly where you stand.
+- Where are you located, and who do you work with? We are based in Boston, Massachusetts, and Boston businesses are our specialty. We also serve clients in Cincinnati, Ohio, and work remotely with businesses anywhere in the United States.
+- What are your hours? Monday through Sunday, 9:00 AM to 5:00 PM Eastern.
+- Do I need an appointment? No. Email or call any time, or book a free AI visibility check online.
+- How can I pay? Cash, credit card, debit card, bank wire, Apple Pay, or a payment plan.
+- Who is behind PickMe AI? PickMe AI is a locally owned Boston startup founded in 2026 by Ben Peri, who completed The Future of Agentic Commerce program at Harvard.
+- What languages do you speak? English.
