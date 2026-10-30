@@ -17,34 +17,344 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "PickMe AI",
-  "alternateName": "BP AEO",
-  "url": "https://pickme-ai.com/",
-  "legalName": "BP Answer Engine Optimization Company LLC",
-  "description": "Answer Engine Optimization (AEO) for small businesses. We help businesses get recommended by ChatGPT, Claude, Google Gemini, Meta AI, Grok, Perplexity, and AI buying agents.",
-  "email": "ben.peri3605@gmail.com",
-  "address": { "@type": "PostalAddress", "addressLocality": "Boston", "addressRegion": "MA", "addressCountry": "US" },
-  "areaServed": "US",
-  "parentOrganization": { "@type": "Organization", "name": "BP AI LLC" },
-  "founder": { "@type": "Person", "name": "Ben Peri", "jobTitle": "Founder", "sameAs": "https://www.linkedin.com/in/benperi" },
-  "knowsAbout": ["Answer Engine Optimization", "Generative Engine Optimization", "Schema markup", "llms.txt", "AI search visibility"],
-  "makesOffer": { "@type": "Offer", "name": "Free AI Visibility Check", "price": "0", "priceCurrency": "USD", "url": "https://calendly.com/ben-peri3605/ai-visibility-check" }
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Organization",
+    "ProfessionalService"
+   ],
+   "@id": "https://pickme-ai.com/#business",
+   "name": "PickMe AI",
+   "alternateName": "BP AEO",
+   "url": "https://pickme-ai.com/",
+   "legalName": "BP Answer Engine Optimization Company LLC",
+   "description": "PickMe AI is an AI visibility agency in Boston, Massachusetts. We get local businesses named by ChatGPT, Gemini, Claude, Perplexity and other AI tools by putting plain, correct facts about the business where AI tools read them (schema, text files, FAQ, listings, the knowledge graph), and we measure every week whether the AI tools name you.",
+   "email": "ben.peri3605@gmail.com",
+   "foundingDate": "2026",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boston",
+    "addressRegion": "MA",
+    "addressCountry": "US"
+   },
+   "areaServed": [
+    {
+     "@type": "AdministrativeArea",
+     "name": "Boston, Massachusetts"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "Cincinnati, Ohio"
+    },
+    {
+     "@type": "Country",
+     "name": "United States"
+    }
+   ],
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "09:00",
+     "closes": "17:00"
+    }
+   ],
+   "paymentAccepted": "cash, credit card, debit card, bank wire, Apple Pay, or a payment plan",
+   "sameAs": [
+    "https://www.linkedin.com/in/benperi"
+   ],
+   "parentOrganization": {
+    "@type": "Organization",
+    "name": "BP AI LLC",
+    "@id": "https://pickme-ai.com/#bp-ai-llc"
+   },
+   "founder": {
+    "@type": "Person",
+    "@id": "https://pickme-ai.com/#ben-peri",
+    "name": "Ben Peri",
+    "jobTitle": "Founder",
+    "sameAs": "https://www.linkedin.com/in/benperi"
+   },
+   "knowsAbout": [
+    "Answer Engine Optimization",
+    "Generative Engine Optimization",
+    "AI visibility",
+    "Schema markup",
+    "llms.txt",
+    "Knowledge graph",
+    "AI search visibility"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Plans",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "@id": "https://pickme-ai.com/#service-free-ai-visibility-check",
+       "name": "Free AI visibility check",
+       "serviceType": "Free AI visibility check",
+       "description": "A free estimate that shows exactly where your gaps are on ChatGPT, Gemini, Claude, Perplexity and other AI tools, and how we would fix them (schema, text files, knowledge graph, attributes), updated weekly.",
+       "provider": {
+        "@id": "https://pickme-ai.com/#business"
+       },
+       "areaServed": [
+        {
+         "@type": "AdministrativeArea",
+         "name": "Boston, Massachusetts"
+        },
+        {
+         "@type": "AdministrativeArea",
+         "name": "Cincinnati, Ohio"
+        },
+        {
+         "@type": "Country",
+         "name": "United States"
+        }
+       ],
+       "url": "https://pickme-ai.com/#plans"
+      },
+      "url": "https://calendly.com/ben-peri3605/ai-visibility-check",
+      "price": "0",
+      "priceCurrency": "USD"
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "@id": "https://pickme-ai.com/#service-artisan",
+       "name": "Artisan plan",
+       "serviceType": "Artisan plan",
+       "description": "AI visibility checks and AI-ready content. 50 AI prompts from your category searched each month across the AI platforms (ChatGPT, Gemini, Perplexity and others), plus a daily update of your site's attributes, schema and text files so you stay at the top of the list.",
+       "provider": {
+        "@id": "https://pickme-ai.com/#business"
+       },
+       "areaServed": [
+        {
+         "@type": "AdministrativeArea",
+         "name": "Boston, Massachusetts"
+        },
+        {
+         "@type": "AdministrativeArea",
+         "name": "Cincinnati, Ohio"
+        },
+        {
+         "@type": "Country",
+         "name": "United States"
+        }
+       ],
+       "url": "https://pickme-ai.com/#plans"
+      },
+      "priceSpecification": {
+       "@type": "PriceSpecification",
+       "price": "250",
+       "priceCurrency": "USD",
+       "description": "$250 a month"
+      },
+      "price": "250",
+      "priceCurrency": "USD"
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "@id": "https://pickme-ai.com/#service-pro",
+       "name": "Pro plan",
+       "serviceType": "Pro plan",
+       "description": "150+ AI prompts per week as an ongoing AI visibility check, constant updates of the website so you stay number one in AI answers, direct-revenue tracking of the customers AI sends you, and a 10% revenue share on AI referrals after 90 days.",
+       "provider": {
+        "@id": "https://pickme-ai.com/#business"
+       },
+       "areaServed": [
+        {
+         "@type": "AdministrativeArea",
+         "name": "Boston, Massachusetts"
+        },
+        {
+         "@type": "AdministrativeArea",
+         "name": "Cincinnati, Ohio"
+        },
+        {
+         "@type": "Country",
+         "name": "United States"
+        }
+       ],
+       "url": "https://pickme-ai.com/#plans"
+      },
+      "priceSpecification": {
+       "@type": "PriceSpecification",
+       "price": "999",
+       "priceCurrency": "USD",
+       "description": "$999 a month"
+      },
+      "price": "999",
+      "priceCurrency": "USD"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://pickme-ai.com/#website",
+   "url": "https://pickme-ai.com/",
+   "name": "PickMe AI",
+   "publisher": {
+    "@id": "https://pickme-ai.com/#business"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://pickme-ai.com/#webpage",
+   "url": "https://pickme-ai.com/",
+   "name": "PickMe AI",
+   "isPartOf": {
+    "@id": "https://pickme-ai.com/#website"
+   },
+   "about": {
+    "@id": "https://pickme-ai.com/#business"
+   },
+   "dateModified": "2026-10-29"
+  }
+ ]
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "What is Answer Engine Optimization?", "acceptedAnswer": { "@type": "Answer", "text": "Answer Engine Optimization (AEO) is the work of making your business easy for AI assistants to find, understand, and recommend. When someone asks ChatGPT for the best bakery nearby, AEO is what puts your business name in the reply." } },
-    { "@type": "Question", "name": "Is this different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and the two work together. SEO helps you rank in the list of links on Google. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking." } },
-    { "@type": "Question", "name": "Do I need a new website?", "acceptedAnswer": { "@type": "Answer", "text": "Not always. We build onto your existing website whenever we can. If it is slow, outdated, or hard to edit, or if you do not have one yet, we build one for you. The free audit tells us which." } },
-    { "@type": "Question", "name": "Can you guarantee I'll show up on ChatGPT?", "acceptedAnswer": { "@type": "Answer", "text": "No one can guarantee what an AI says. We build and maintain your site to give you the strongest possible chance, and we show you the results every month." } },
-    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "A flat monthly fee, month to month, that you can cancel any time. The amount depends on how much work your current site needs, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing." } },
-    { "@type": "Question", "name": "How fast will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Site changes go live in the first few weeks. Each AI platform refreshes what it knows on its own schedule, so some pick up changes faster than others. Your monthly report shows exactly where you stand." } }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "@id": "https://pickme-ai.com/#faq",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is Answer Engine Optimization?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Answer Engine Optimization (AEO) is the work of making your business easy for AI assistants to find, understand, and recommend. When someone asks ChatGPT for the best bakery nearby, AEO is what puts your business name in the reply."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is this different from SEO?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and the two work together. SEO helps you rank in the list of links on Google. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does it cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Two plans. Artisan is $250 a month. Pro is $999 a month. The AI visibility check that starts everything is free."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the Artisan plan?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI visibility checks and AI-ready content. 50 AI prompts from your category searched each month across the AI platforms (ChatGPT, Gemini, Perplexity and others), plus a daily update of your site's attributes, schema and text files so you stay at the top of the list. $250 a month."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the Pro plan?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "150+ AI prompts per week as an ongoing AI visibility check, constant updates of the website so you stay number one in AI answers, direct-revenue tracking of the customers AI sends you, and a 10% revenue share on AI referrals after 90 days. $999 a month."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is included in the free AI visibility check?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A free estimate that shows exactly where your gaps are on ChatGPT, Gemini, Claude, Perplexity and other AI tools, and how we would fix them: schema, text files, the knowledge graph and your business attributes, updated weekly."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you guarantee your work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. 90-day money-back guarantee: if your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of your money back."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need a new website?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not always. We build onto your existing website whenever we can. If it's slow, outdated, or hard to edit, or if you don't have one yet, we build one for you. The free audit tells us which."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How fast will I see results?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Site changes go live in the first few weeks. Each AI platform refreshes what it knows on its own schedule, so some pick up changes faster than others. Your monthly report shows exactly where you stand."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Where are you located, and where do your clients come from?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "We are based in Boston, Massachusetts, where we specialize in Boston businesses. We also have clients in Cincinnati, Ohio, and we work remotely with businesses anywhere in the United States."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are your hours?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Monday to Sunday, 9:00 AM to 5:00 PM Eastern."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need an appointment?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No appointment needed: email or call any time, or book a free AI visibility check online."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I pay?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Cash, credit card, debit card, bank wire, Apple Pay, or a payment plan."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long have you been in business, and who owns PickMe AI?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "PickMe AI opened in 2026. It is a locally owned startup in the Boston area, founded and run by Ben Peri."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What languages do you speak?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "English."
+   }
+  }
+ ]
 }
 </script>
 <style>
@@ -461,6 +771,7 @@ img, svg { max-width: 100%; }
         <li><a href="#how">How It Works</a></li>
         <li><a href="#why">Why Now</a></li>
         <li><a href="#platforms">Platforms</a></li>
+        <li><a href="#plans">Plans</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
@@ -697,6 +1008,44 @@ img, svg { max-width: 100%; }
   </section>
 
   <!-- 7. FAQ -->
+  <!-- 7b. Plans and details (facts; the schema in <head> says the same) -->
+  <section class="section section--mist" id="plans" aria-labelledby="plans-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Plans and details</p>
+        <h2 id="plans-title">Two plans. One free check to start.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step__n" aria-hidden="true">1</span>
+          <h3>Free AI visibility check</h3>
+          <p>Free ($0). A free estimate that shows exactly where your gaps are on ChatGPT, Gemini, Claude, Perplexity and other AI tools, and how we would fix them (schema, text files, knowledge graph, attributes), updated weekly. <a href="https://calendly.com/ben-peri3605/ai-visibility-check">Book it</a>.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n" aria-hidden="true">2</span>
+          <h3>Artisan plan</h3>
+          <p>$250 a month. AI visibility checks and AI-ready content. 50 AI prompts from your category searched each month across the AI platforms (ChatGPT, Gemini, Perplexity and others), plus a daily update of your site's attributes, schema and text files so you stay at the top of the list.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__n" aria-hidden="true">3</span>
+          <h3>Pro plan</h3>
+          <p>$999 a month. 150+ AI prompts per week as an ongoing AI visibility check, constant updates of the website so you stay number one in AI answers, direct-revenue tracking of the customers AI sends you, and a 10% revenue share on AI referrals after 90 days.</p>
+        </li>
+      </ol>
+      <div class="gets-wrap" data-reveal>
+        <p class="gets__title">The details</p>
+        <ul class="gets" aria-label="Business details">
+          <li><span>Guarantee: 90-day money-back guarantee. If your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of your money back.</span></li>
+          <li><span>Where: based in Boston, Massachusetts (our specialty is Boston businesses); clients in Cincinnati, Ohio; remote service for businesses anywhere in the United States.</span></li>
+          <li><span>Hours: Monday to Sunday, 9:00 AM to 5:00 PM Eastern.</span></li>
+          <li><span>Getting started: no appointment needed. Email or call any time, or book the free check online. Remote service; no office to visit.</span></li>
+          <li><span>Payment: cash, credit card, debit card, bank wire, Apple Pay, or a payment plan.</span></li>
+          <li><span>Who we are: a locally owned Boston startup, opened in 2026, founded and run by Ben Peri. We speak English.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="faq" aria-labelledby="faq-title">
     <div class="wrap faq__layout">
       <div class="section-head">
@@ -710,23 +1059,59 @@ img, svg { max-width: 100%; }
         </details>
         <details>
           <summary>Is this different from SEO?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">Yes, and the two work together. SEO helps you rank in the list of links on Google. AEO helps you get named in the AI's answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking.</p>
+          <p class="faq__a">Yes, and the two work together. SEO helps you rank in the list of links on Google. AEO helps you get named in the AI&#x27;s answer, which usually includes only two or three businesses. Most of what we do also helps your Google ranking.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">Two plans. Artisan is $250 a month. Pro is $999 a month. The AI visibility check that starts everything is free.</p>
+        </details>
+        <details>
+          <summary>What is the Artisan plan?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">AI visibility checks and AI-ready content. 50 AI prompts from your category searched each month across the AI platforms (ChatGPT, Gemini, Perplexity and others), plus a daily update of your site&#x27;s attributes, schema and text files so you stay at the top of the list. $250 a month.</p>
+        </details>
+        <details>
+          <summary>What is the Pro plan?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">150+ AI prompts per week as an ongoing AI visibility check, constant updates of the website so you stay number one in AI answers, direct-revenue tracking of the customers AI sends you, and a 10% revenue share on AI referrals after 90 days. $999 a month.</p>
+        </details>
+        <details>
+          <summary>What is included in the free AI visibility check?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">A free estimate that shows exactly where your gaps are on ChatGPT, Gemini, Claude, Perplexity and other AI tools, and how we would fix them: schema, text files, the knowledge graph and your business attributes, updated weekly.</p>
+        </details>
+        <details>
+          <summary>Do you guarantee your work?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">Yes. 90-day money-back guarantee: if your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of your money back.</p>
         </details>
         <details>
           <summary>Do I need a new website?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">Not always. We build onto your existing website whenever we can. If it's slow, outdated, or hard to edit, or if you don't have one yet, we build one for you. The free audit tells us which.</p>
-        </details>
-        <details>
-          <summary>Can you guarantee I'll show up on ChatGPT?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">No one can guarantee what an AI says. We build and maintain your site to give you the strongest possible chance, and we show you the results every month.</p>
-        </details>
-        <details>
-          <summary>What does it cost?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
-          <p class="faq__a">A flat monthly fee, month to month, that you can cancel any time. The amount depends on how much work your current site needs, so we quote it on the free call after we've looked at your site. The audit and the call cost nothing, and you'll know the number before you decide.</p>
+          <p class="faq__a">Not always. We build onto your existing website whenever we can. If it&#x27;s slow, outdated, or hard to edit, or if you don&#x27;t have one yet, we build one for you. The free audit tells us which.</p>
         </details>
         <details>
           <summary>How fast will I see results?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
           <p class="faq__a">Site changes go live in the first few weeks. Each AI platform refreshes what it knows on its own schedule, so some pick up changes faster than others. Your monthly report shows exactly where you stand.</p>
+        </details>
+        <details>
+          <summary>Where are you located, and where do your clients come from?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">We are based in Boston, Massachusetts, where we specialize in Boston businesses. We also have clients in Cincinnati, Ohio, and we work remotely with businesses anywhere in the United States.</p>
+        </details>
+        <details>
+          <summary>What are your hours?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">Monday to Sunday, 9:00 AM to 5:00 PM Eastern.</p>
+        </details>
+        <details>
+          <summary>Do I need an appointment?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">No appointment needed: email or call any time, or book a free AI visibility check online.</p>
+        </details>
+        <details>
+          <summary>How do I pay?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">Cash, credit card, debit card, bank wire, Apple Pay, or a payment plan.</p>
+        </details>
+        <details>
+          <summary>How long have you been in business, and who owns PickMe AI?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">PickMe AI opened in 2026. It is a locally owned startup in the Boston area, founded and run by Ben Peri.</p>
+        </details>
+        <details>
+          <summary>What languages do you speak?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">English.</p>
         </details>
       </div>
     </div>
@@ -816,7 +1201,7 @@ img, svg { max-width: 100%; }
         <a href="#contact">Contact us</a>
       </div>
     </div>
-    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC. All rights reserved. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
+    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC (PickMe AI, also known as BP AEO), a BP AI LLC company. All rights reserved. Last updated: October 29, 2026. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
   </div>
 </footer>
 
