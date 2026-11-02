@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | PickMe AI</title>
+<meta name="description" content="What actually makes an AI assistant name a small business, what we change on a website to get there, and how to measure whether it worked.">
+<link rel="canonical" href="https://pickme-ai.com/blog/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+/* Layout: dark hero and closing band bracket light reading sections; one 1160px column, 20px gutters. Single deliberate look (no dark-mode swap). */
+:root {
+  --navy: #0B1220;
+  --navy-2: #111A2D;
+  --navy-line: rgba(232, 237, 246, 0.10);
+  --on-dark: #E8EDF6;
+  --on-dark-2: #9AA6BC;
+  --ink: #0B1220;
+  --ink-2: #3F4A5E;
+  --ink-3: #5E6A80;
+  --paper: #FFFFFF;
+  --mist: #EEF2F8;
+  --line: #E2E7EF;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --wrap: 1160px;
+  --gutter: 20px;
+  --radius: 12px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 128px; -webkit-text-size-adjust: 100%; }
+@media (min-width: 900px) { html { scroll-padding-top: 88px; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+@media (min-width: 768px) { body { font-size: 18px; } }
+
+/* No italics anywhere */
+em, i, cite, address, dfn, var { font-style: normal; }
+
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+img, svg { max-width: 100%; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  background: var(--paper); color: var(--ink); padding: 10px 14px; border-radius: 8px; font-weight: 600;
+}
+.skip:focus { top: 12px; }
+
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.section-head .eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--accent); font-weight: 600;
+}
+.section-head .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--accent); border-radius: 1px; }
+.section { padding-block: clamp(84px, 11vw, 144px); }
+.section--mist { background: var(--mist); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-head { display: grid; gap: 14px; max-width: 720px; margin-bottom: clamp(40px, 5.5vw, 64px); }
+.section-head h2 { font-size: clamp(1.875rem, 3.6vw, 2.75rem); }
+.section-head p { color: var(--ink-2); max-width: 60ch; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 22px;
+  border-radius: 10px; border: 1px solid transparent;
+  background: var(--accent); color: #FFFFFF;
+  font: 600 1rem/1.2 var(--font-sans); letter-spacing: -0.01em;
+  text-decoration: none; cursor: pointer;
+  transition: background-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 6px 20px -8px rgba(37, 99, 235, .6);
+}
+.btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn--sm { min-height: 40px; padding: 8px 16px; font-size: 0.9375rem; }
+.btn svg { width: 16px; height: 16px; flex: none; transition: transform .15s ease; }
+.btn:hover svg { transform: translateX(2px); }
+
+/* Nav: tinted bar, section links always visible (two rows on phones, one row on desktop) */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: #E7EDF6;
+  border-bottom: 1px solid #C9D3E2;
+  box-shadow: 0 8px 24px -18px rgba(11,18,32,.35);
+  color: var(--ink);
+}
+.nav__inner {
+  display: grid; grid-template-columns: 1fr auto; align-items: center;
+  column-gap: 12px; row-gap: 10px; padding-block: 10px 12px;
+}
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); white-space: nowrap; min-width: 0; overflow: hidden; }
+.logo__mark { width: 40px; height: 40px; flex: none; transition: transform .2s ease; }
+.logo:hover .logo__mark { transform: translateY(-1px) rotate(-3deg); }
+.logo__name { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.03em; line-height: 1; }
+.nav__cta { grid-column: 2; grid-row: 1; min-height: 40px; padding-inline: 14px; white-space: nowrap; }
+.nav__primary { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+.cta-long { display: none; }
+.cta-short { display: inline; }
+.nav__links {
+  display: flex; list-style: none; margin: 0; padding: 4px; gap: 4px; min-width: 0;
+  background: rgba(255,255,255,.55); border: 1px solid #C9D3E2; border-radius: 999px;
+}
+.nav__links li { flex: 1 1 auto; min-width: 0; }
+.nav__links a {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 40px; padding: 6px 6px; border-radius: 999px;
+  color: var(--ink-2); text-decoration: none; font-size: 0.8125rem; font-weight: 600; white-space: nowrap; letter-spacing: -0.01em;
+  transition: color .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.nav__links a:hover { color: var(--ink); background: #FFFFFF; }
+.nav__links a.is-active { color: var(--accent); background: #FFFFFF; box-shadow: 0 1px 2px rgba(11,18,32,.08), inset 0 0 0 1px #C9D3E2; }
+@media (max-width: 359px) { .nav__links a { font-size: 0.75rem; padding-inline: 3px; } .logo__name { font-size: 1.25rem; } }
+@media (min-width: 420px) { .nav__links a { font-size: 0.875rem; padding-inline: 10px; } }
+
+@media (min-width: 900px) {
+  .nav__inner { grid-template-columns: auto 1fr auto; column-gap: 24px; padding-block: 0; height: 68px; }
+  .logo__mark { width: 44px; height: 44px; }
+  .logo__name { font-size: 1.625rem; }
+  .nav__primary { grid-column: 2; grid-row: 1; justify-self: center; }
+  .nav__links li { flex: 0 0 auto; }
+  .nav__links a { min-height: 0; padding: 8px 16px; font-size: 0.9375rem; }
+  .nav__cta { grid-column: 3; padding-inline: 16px; }
+  .cta-long { display: inline; }
+  .cta-short { display: none; }
+}
+
+/* Hero */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--navy); color: var(--on-dark);
+  padding-block: clamp(56px, 9vw, 112px) clamp(64px, 9vw, 104px);
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(232,237,246,.11) 1px, transparent 1px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 70% at 70% 30%, #000 30%, transparent 75%);
+}
+.hero__grid { position: relative; display: grid; gap: 40px; align-items: start; }
+.hero__copy { display: grid; gap: 24px; min-width: 0; }
+.hero h1 { font-size: clamp(2.5rem, 6.4vw, 4.375rem); letter-spacing: -0.04em; line-height: 1.02; max-width: 13ch; }
+.hero__sub { font-size: clamp(1.0625rem, 1.6vw, 1.25rem); color: var(--on-dark-2); max-width: 46ch; line-height: 1.55; }
+.hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 8px; }
+
+/* Example AI answer card */
+.answer {
+  position: relative; min-width: 0;
+  background: linear-gradient(180deg, rgba(232,237,246,.05), rgba(232,237,246,.02));
+  border: 1px solid var(--navy-line);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 30px 80px -40px rgba(0,0,0,.8);
+}
+.answer__bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.answer__dots { display: flex; gap: 6px; }
+.answer__dots span { width: 9px; height: 9px; border-radius: 50%; background: rgba(232,237,246,.16); }
+.answer__label { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+.answer__q {
+  margin-left: auto; width: fit-content; max-width: 88%;
+  background: rgba(232,237,246,.08); border-radius: 14px 14px 4px 14px;
+  padding: 10px 14px; font-size: 0.9375rem; color: var(--on-dark);
+}
+.answer__a { margin-top: 18px; display: grid; gap: 12px; }
+.answer__intro { font-size: 0.9375rem; color: var(--on-dark-2); }
+.answer__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pick {
+  display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center;
+  padding: 12px; border-radius: 10px; border: 1px solid transparent;
+}
+.pick__n {
+  width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: 0.8125rem; color: var(--on-dark-2); background: rgba(232,237,246,.06);
+}
+.pick--you { background: rgba(232,237,246,.07); border-color: rgba(232,237,246,.22); }
+.pick--you .pick__n { background: var(--on-dark); color: var(--navy); font-weight: 600; }
+.pick__name { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-weight: 600; color: #FFFFFF; }
+.pick__tag {
+  font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(232,237,246,.3); color: var(--on-dark);
+}
+.pick__meta { font-size: 0.8125rem; color: var(--on-dark-2); margin-top: 2px; }
+.skel { display: grid; gap: 7px; }
+.skel span { display: block; height: 9px; border-radius: 5px; background: rgba(232,237,246,.09); }
+.skel span:first-child { width: 46%; height: 11px; background: rgba(232,237,246,.13); }
+.skel span:last-child { width: 68%; }
+.answer__foot { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--navy-line); font-size: 0.8125rem; color: var(--on-dark-2); }
+
+@media (min-width: 980px) {
+  .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: 56px; }
+}
+
+/* Stats: one lead number, three supporting numbers */
+.stats { padding-block: clamp(56px, 8vw, 96px); border-bottom: 1px solid var(--line); }
+.stats__grid { display: grid; gap: 40px; }
+.stat { min-width: 0; }
+.stat--lead { display: grid; gap: 12px; align-content: start; }
+.stat--lead .stat__num {
+  font-size: clamp(4.5rem, 11vw, 8rem); font-weight: 700; letter-spacing: -0.05em; line-height: .95;
+  color: var(--accent); font-variant-numeric: tabular-nums;
+}
+.stat--lead .stat__label { font-size: clamp(1.125rem, 1.8vw, 1.375rem); line-height: 1.4; color: var(--ink); max-width: 24ch; }
+.stat__tag { margin-top: 6px; font-size: clamp(1.125rem, 1.8vw, 1.375rem); font-weight: 700; letter-spacing: -0.02em; color: var(--ink); max-width: 24ch; }
+.stats__list { list-style: none; margin: 0; padding: 0; display: grid; }
+.stats__list .stat { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: center; padding-block: 18px; border-top: 1px solid var(--line); }
+.stats__list .stat:last-child { border-bottom: 1px solid var(--line); }
+.stats__list .stat__num { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.04em; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stats__list .stat__label { font-size: 1rem; line-height: 1.45; color: var(--ink-2); }
+.stats__src { margin-top: clamp(28px, 4vw, 40px); padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; color: var(--ink-3); }
+@media (min-width: 900px) {
+  .stats__grid { grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+  .stats__list .stat { grid-template-columns: 110px 1fr; padding-block: 22px; }
+  .stats__list .stat__num { font-size: 2.5rem; }
+}
+
+/* Steps */
+.steps { display: grid; gap: 16px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
+.step {
+  display: grid; gap: 14px; align-content: start; min-width: 0;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px;
+}
+.step__n {
+  font-family: var(--font-mono); font-size: 0.875rem; font-weight: 500; color: var(--accent);
+  width: 36px; height: 36px; display: grid; place-items: center;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--mist);
+}
+.step h3 { font-size: 1.375rem; letter-spacing: -0.02em; }
+.step p { color: var(--ink-2); }
+@media (min-width: 900px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.gets-wrap { margin-top: clamp(28px, 4vw, 40px); padding: 24px 28px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); display: grid; gap: 14px; }
+.gets__title { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.gets { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px 32px; }
+.gets li { display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--ink); min-width: 0; }
+.gets svg { width: 18px; height: 18px; flex: none; color: var(--accent); }
+@media (min-width: 640px) { .gets { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .gets { grid-template-columns: repeat(3, 1fr); } }
+
+/* Compare */
+.compare { display: grid; gap: 20px; }
+.way { border-radius: var(--radius); padding: 28px; display: grid; gap: 24px; align-content: start; min-width: 0; }
+.way--old { background: var(--paper); border: 1px solid var(--line); color: var(--ink); --pic-paper: #FFFFFF; --pic-ad: #FDE68A; --pic-adtext: #7A5A00; }
+.way--new { background: var(--navy); color: var(--on-dark); border: 1px solid var(--navy); --pic-paper: #182238; --pic-ad: transparent; }
+.way__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.way h3 { font-size: 1.5rem; letter-spacing: -0.02em; }
+.way__tag { font-size: 0.875rem; font-weight: 500; padding: 4px 10px; border-radius: 999px; border: 1px solid currentColor; opacity: .75; }
+.picflow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 6px; }
+.picstep { display: grid; justify-items: center; gap: 10px; text-align: center; min-width: 0; }
+.picstep svg { width: 112px; height: 112px; }
+.picstep__label { font-weight: 600; font-size: 1rem; line-height: 1.3; max-width: 14ch; text-wrap: balance; }
+.picarrow { display: grid; place-items: center; }
+.picarrow svg { width: 26px; height: 26px; transform: rotate(90deg); opacity: .55; }
+@media (min-width: 560px) {
+  .picflow { grid-template-columns: 1fr 28px 1fr 28px 1fr; align-items: start; gap: 4px; }
+  .picarrow { padding-top: 42px; }
+  .picarrow svg { transform: none; }
+}
+.i-line { fill: none; stroke: currentColor; stroke-width: 2.5; }
+.i-round { stroke-linecap: round; stroke-linejoin: round; }
+.i-paper { fill: var(--pic-paper); }
+.i-fill { fill: currentColor; }
+.i-soft { fill: currentColor; opacity: .22; }
+.i-accent { fill: var(--accent); }
+.i-ad { fill: var(--pic-ad); }
+.i-adtext { font: 700 7px var(--font-sans); fill: var(--pic-adtext, currentColor); text-anchor: middle; }
+.i-big { font: 700 40px var(--font-sans); fill: currentColor; text-anchor: middle; }
+.i-say { font: 600 12px var(--font-sans); fill: currentColor; text-anchor: middle; }
+.i-you { font: 700 11px var(--font-sans); fill: #FFFFFF; text-anchor: middle; letter-spacing: .08em; }
+.i-check { fill: none; stroke: var(--accent); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+.way--new .i-check { stroke: #FFFFFF; }
+.way__verdict { font-weight: 600; font-size: 1.125rem; letter-spacing: -0.01em; padding-top: 18px; border-top: 1px solid var(--line); }
+.way--old .way__verdict { color: var(--ink-2); }
+.way--new .way__verdict { color: #FFFFFF; border-top-color: var(--navy-line); }
+@media (min-width: 820px) { .compare { grid-template-columns: 1fr 1fr; gap: 24px; } }
+
+/* Platforms: name chips */
+.plat { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.plat li { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 12px 22px; font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
+.plat li.plat__more { background: transparent; border-style: dashed; color: var(--ink-3); font-weight: 500; }
+
+/* FAQ */
+.faq__layout { display: grid; gap: 32px; }
+.faq { border-top: 1px solid var(--line); min-width: 0; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  padding-block: 22px; font-weight: 600; font-size: 1.125rem; letter-spacing: -0.015em;
+  border-radius: 6px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { color: var(--ink-2); }
+.faq__icon { flex: none; width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line); display: grid; place-items: center; transition: transform .2s ease; }
+.faq__icon svg { width: 14px; height: 14px; }
+.faq details[open] .faq__icon { transform: rotate(45deg); }
+.faq__a { padding-bottom: 24px; color: var(--ink-2); max-width: 62ch; }
+@media (min-width: 900px) { .faq__layout { grid-template-columns: 0.8fr 1.2fr; gap: 64px; } .faq__layout .section-head { margin-bottom: 0; } }
+
+/* Final CTA */
+.cta {
+  position: relative; overflow: hidden;
+  background: var(--navy); color: var(--on-dark);
+  padding-block: clamp(72px, 10vw, 120px);
+  text-align: left;
+}
+.cta::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(232,237,246,.10) 1px, transparent 1px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 60% 90% at 85% 50%, #000 20%, transparent 70%);
+  mask-image: radial-gradient(ellipse 60% 90% at 85% 50%, #000 20%, transparent 70%);
+}
+.cta .wrap { position: relative; display: grid; gap: clamp(40px, 6vw, 64px); }
+.cta__inner { display: grid; gap: 28px; justify-items: start; }
+.contact { display: grid; gap: 16px; }
+.founder, .contact__card { background: rgba(232,237,246,.05); border: 1px solid var(--navy-line); border-radius: 16px; padding: 24px; min-width: 0; }
+.founder { display: grid; grid-template-columns: 88px 1fr; gap: 20px; align-items: start; }
+.founder__avatar { width: 88px; height: 88px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(180deg, #3B82F6, #1D4ED8); color: #FFFFFF; font-weight: 700; font-size: 1.5rem; letter-spacing: -0.02em; overflow: hidden; }
+.founder__avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.founder__body { display: grid; gap: 6px; min-width: 0; }
+.founder__eyebrow { font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+.founder__name { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; color: #FFFFFF; }
+.founder__bio { font-size: 0.9375rem; line-height: 1.55; color: var(--on-dark-2); }
+.founder__link { justify-self: start; display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; min-height: 40px; padding: 8px 14px; border-radius: 8px; border: 1px solid rgba(232,237,246,.25); color: #FFFFFF; font-weight: 600; font-size: 0.9375rem; text-decoration: none; transition: background-color .15s ease, border-color .15s ease; }
+.founder__link:hover { background: rgba(232,237,246,.08); border-color: rgba(232,237,246,.5); }
+.founder__link svg { width: 18px; height: 18px; flex: none; }
+.contact__card { display: grid; gap: 14px; align-content: start; }
+.contact__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.contact__list li { display: grid; gap: 2px; font-size: 0.875rem; color: var(--on-dark); min-width: 0; overflow-wrap: anywhere; }
+.contact__list a { color: #FFFFFF; text-decoration: none; border-bottom: 1px solid rgba(232,237,246,.3); width: fit-content; }
+.contact__list a:hover { border-color: #FFFFFF; }
+.contact__k { font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-dark-2); }
+@media (min-width: 560px) { .contact__list { grid-template-columns: minmax(0, 1.6fr) 1fr 1fr; gap: 16px; } }
+@media (min-width: 1000px) { .cta .wrap { grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: 72px; } }
+.cta h2 { font-size: clamp(2rem, 4.6vw, 3.25rem); letter-spacing: -0.04em; max-width: 16ch; }
+.cta p { color: var(--on-dark-2); max-width: 52ch; }
+
+/* Footer */
+.footer { background: var(--navy); color: var(--on-dark-2); border-top: 1px solid var(--navy-line); padding-block: 48px 40px; font-size: 0.9375rem; }
+.footer__top { display: grid; gap: 28px; }
+.footer__brand { display: grid; gap: 12px; justify-items: start; }
+.footer__brand .logo { color: var(--on-dark); }
+.footer__brand p { max-width: 36ch; }
+.footer a:not(.logo) { color: var(--on-dark); text-decoration: none; border-bottom: 1px solid var(--navy-line); }
+.footer a:not(.logo):hover { border-color: var(--on-dark); }
+.footer__legal { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--navy-line); font-size: 0.8125rem; }
+@media (min-width: 768px) { .footer__top { grid-template-columns: 1.4fr 1fr 1fr; } }
+
+
+/* Scroll reveal: elements stay visible at rest; motion plays only as they arrive */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.is-in { animation: rise .6s cubic-bezier(.2,.7,.2,1) both; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .is-in { animation: none; }
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+<style>
+.post{max-width:760px;margin:0 auto;padding:56px 20px 72px}
+.post__meta{color:var(--muted,#64748b);font-size:15px;margin:0 0 28px}
+.post h1{font-size:clamp(30px,4.5vw,44px);line-height:1.15;margin:0 0 14px}
+.post h2{font-size:24px;margin:36px 0 12px}
+.post p,.post li{font-size:18px;line-height:1.65}
+.post ul{padding-left:22px}
+.post__cta{margin-top:40px;padding:22px 24px;border:1px solid #e2e8f0;border-radius:12px}
+</style>
+</head>
+<body>
+<header class="nav" id="top">
+  <div class="wrap nav__inner">
+    <a class="logo" href="/#top" aria-label="PickMe AI, home">
+      <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="bot-nav-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
+          <linearGradient id="bot-nav-face" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101A30"/><stop offset="1" stop-color="#0B1220"/></linearGradient>
+        </defs>
+        <!-- antenna -->
+        <path d="M24 10V6" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="24" cy="4.6" r="2.8" fill="#60A5FA"/>
+        <circle cx="23.2" cy="3.8" r=".9" fill="#FFFFFF" fill-opacity=".9"/>
+        <!-- ears -->
+        <rect x="3.5" y="19" width="5" height="10" rx="2.5" fill="#1D4ED8"/>
+        <rect x="39.5" y="19" width="5" height="10" rx="2.5" fill="#1D4ED8"/>
+        <!-- head -->
+        <rect x="7" y="10" width="34" height="28" rx="11" fill="url(#bot-nav-body)"/>
+        <!-- face screen -->
+        <rect x="11.5" y="14.5" width="25" height="19" rx="7.5" fill="url(#bot-nav-face)"/>
+        <!-- eyes -->
+        <rect x="16" y="19" width="5.2" height="7.6" rx="2.6" fill="#FFFFFF"/>
+        <rect x="26.8" y="19" width="5.2" height="7.6" rx="2.6" fill="#FFFFFF"/>
+        <!-- smile -->
+        <path d="M19.5 29.2c2.6 2 6.4 2 9 0" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round"/>
+        <!-- neck / chin -->
+        <rect x="18" y="38" width="12" height="4" rx="2" fill="#1D4ED8"/>
+        <!-- cheek glow -->
+        <circle cx="14.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
+        <circle cx="33.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
+      </svg>
+      <span class="logo__name">PickMe AI</span>
+    </a>
+    <nav class="nav__primary" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="/#how">How It Works</a></li>
+        <li><a href="/#why">Why Now</a></li>
+        <li><a href="/#platforms">Platforms</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--sm nav__cta" href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book><span class="cta-long">Book a Free AI Visibility Check</span><span class="cta-short">Free AI Check</span></a>
+  </div>
+</header>
+<main id="main"><article class="post"><h1>Blog</h1><p class="post__meta">Plain-words notes on getting a business recommended by AI tools.</p><ul><li><a href="/blog/how-to-get-your-business-recommended-by-chatgpt/">How to get your business recommended by ChatGPT, Gemini and Claude</a> <span class="post__meta">November 2, 2026</span><br>What actually makes an AI assistant name a small business, what we change on a website to get there, and how to measure whether it worked.</li></ul></article></main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="/#top" aria-label="PickMe AI, back to top">
+      <svg class="logo__mark" viewBox="0 0 48 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="bot-foot-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
+          <linearGradient id="bot-foot-face" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101A30"/><stop offset="1" stop-color="#0B1220"/></linearGradient>
+        </defs>
+        <!-- antenna -->
+        <path d="M24 10V6" stroke="#1D4ED8" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="24" cy="4.6" r="2.8" fill="#60A5FA"/>
+        <circle cx="23.2" cy="3.8" r=".9" fill="#FFFFFF" fill-opacity=".9"/>
+        <!-- ears -->
+        <rect x="3.5" y="19" width="5" height="10" rx="2.5" fill="#1D4ED8"/>
+        <rect x="39.5" y="19" width="5" height="10" rx="2.5" fill="#1D4ED8"/>
+        <!-- head -->
+        <rect x="7" y="10" width="34" height="28" rx="11" fill="url(#bot-foot-body)"/>
+        <!-- face screen -->
+        <rect x="11.5" y="14.5" width="25" height="19" rx="7.5" fill="url(#bot-foot-face)"/>
+        <!-- eyes -->
+        <rect x="16" y="19" width="5.2" height="7.6" rx="2.6" fill="#FFFFFF"/>
+        <rect x="26.8" y="19" width="5.2" height="7.6" rx="2.6" fill="#FFFFFF"/>
+        <!-- smile -->
+        <path d="M19.5 29.2c2.6 2 6.4 2 9 0" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round"/>
+        <!-- neck / chin -->
+        <rect x="18" y="38" width="12" height="4" rx="2" fill="#1D4ED8"/>
+        <!-- cheek glow -->
+        <circle cx="14.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
+        <circle cx="33.5" cy="27.5" r="1.3" fill="#60A5FA" fill-opacity=".7"/>
+      </svg>
+      <span class="logo__name">PickMe AI</span>
+    </a>
+        <p>PickMe AI is a service of BP Answer Engine Optimization Company LLC, a BP AI LLC company, based in Boston, MA.</p>
+      </div>
+      <div>
+        <strong style="display:block;color:var(--on-dark);font-weight:600;margin-bottom:4px">Contact</strong>
+        <a href="mailto:ben@pickme-ai.com">ben@pickme-ai.com</a>
+      </div>
+      <div>
+        <strong style="display:block;color:var(--on-dark);font-weight:600;margin-bottom:4px">Get started</strong>
+        <a href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>Book a free AI visibility check</a><br>
+        <a href="/#contact">Contact us</a>
+      </div>
+    </div>
+    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC (PickMe AI, also known as BP AEO), a BP AI LLC company. All rights reserved. Last updated: November 1, 2026. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
+  </div>
+</footer>
+</body>
+</html>

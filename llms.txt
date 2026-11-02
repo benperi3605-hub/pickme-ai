@@ -75,3 +75,7 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 - How do you measure results? We ask ChatGPT, Gemini, Claude and other AI tools real customer questions from your category, record whether they name you, and report one AI visibility score every month. We also track the customers AI tools refer to you and the revenue those referrals convert into, and share both with you monthly.
 - Who is PickMe AI for? Small businesses that want AI tools to send them customers: owners who want to be the name ChatGPT, Gemini, Claude and Perplexity recommend, and to turn those referrals into booked work and revenue. Local service businesses, shops, professional services and online brands.
 - What do you actually change on my website? We add schema markup, an llms.txt file, an FAQ written from your facts and your business attributes to your website, fix your listings, keep up your backlinks, Reddit threads and blog posts, and update all of it as what customers ask changes.
+
+## Articles
+
+- [How to get your business recommended by ChatGPT, Gemini and Claude](https://pickme-ai.com/blog/how-to-get-your-business-recommended-by-chatgpt/): What actually makes an AI assistant name a small business, what we change on a website to get there, and how to measure whether it worked.
