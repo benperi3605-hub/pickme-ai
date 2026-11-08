@@ -144,7 +144,21 @@
      }
     ]
    },
-   "telephone": "+1-513-550-0184"
+   "telephone": "+1-513-550-0184",
+   "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday",
+     "Sunday"
+    ],
+    "opens": "09:00",
+    "closes": "17:00"
+   }
   },
   {
    "@type": "WebSite",
@@ -166,7 +180,7 @@
    "about": {
     "@id": "https://pickme-ai.com/#business"
    },
-   "dateModified": "2026-11-01"
+   "dateModified": "2026-11-08"
   }
  ]
 }
@@ -195,6 +209,14 @@
   },
   {
    "@type": "Question",
+   "name": "How do I get my business recommended by ChatGPT?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Give ChatGPT and other AI tools clear, consistent facts about your business in the places they read: schema markup and an FAQ on your website, an llms.txt file, your listings, and mentions on Reddit and blogs. That is our work: we add these to your site, fix your listings, and keep everything current as what customers ask changes."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "What is included in the free AI visibility check?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -207,6 +229,14 @@
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Yes. If your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, we refund all of your money."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can anyone guarantee ChatGPT will recommend my business?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No one controls what an AI tool says. What we guarantee is your money: if your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of it back."
    }
   },
   {
@@ -243,14 +273,6 @@
   },
   {
    "@type": "Question",
-   "name": "How can I pay?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Cash, credit card, debit card, Apple Pay, bank wire, or a payment plan."
-   }
-  },
-  {
-   "@type": "Question",
    "name": "Who is behind PickMe AI?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -275,10 +297,34 @@
   },
   {
    "@type": "Question",
+   "name": "What is an AI visibility score?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It is the percent of real customer questions where an AI tool names your business. We ask ChatGPT, Gemini, Claude and others the questions customers ask in your category, count every answer that names you, and report one score every month."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do you know a change worked, and not luck?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AI answers change from day to day, so one check is a snapshot. We ask the same questions every week and judge the trend over at least three weeks before calling anything a result."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Who is PickMe AI for?",
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Small businesses that want AI tools to send them customers: owners who want to be the name ChatGPT, Gemini, Claude and Perplexity recommend, and to turn those referrals into booked work and revenue. Local service businesses, shops, professional services and online brands."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you work with businesses in my industry?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We work with businesses in any industry, with a focus on law firms, e-commerce brands and local businesses."
    }
   },
   {
@@ -707,6 +753,7 @@ img, svg { max-width: 100%; }
         <li><a href="#why">Why Now</a></li>
         <li><a href="#platforms">Platforms</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/blog/">Blog</a></li>
       </ul>
     </nav>
     <a class="btn btn--sm nav__cta" href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book><span class="cta-long">Book a Free AI Visibility Check</span><span class="cta-short">Free AI Check</span></a>
@@ -958,12 +1005,20 @@ img, svg { max-width: 100%; }
           <p class="faq__a">SEO competes for a position in a list of links. AEO competes for a mention in the answer itself, where there are usually only two or three spots. Both rest on the same foundation of clean structure, accurate facts and consistent listings, so good AEO work often lifts your Google rankings too.</p>
         </details>
         <details>
+          <summary>How do I get my business recommended by ChatGPT?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">Give ChatGPT and other AI tools clear, consistent facts about your business in the places they read: schema markup and an FAQ on your website, an llms.txt file, your listings, and mentions on Reddit and blogs. That is our work: we add these to your site, fix your listings, and keep everything current as what customers ask changes.</p>
+        </details>
+        <details>
           <summary>What is included in the free AI visibility check?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
           <p class="faq__a">The free check shows exactly where you appear, and where you don&#x27;t, on ChatGPT, Gemini, Claude, Perplexity and other AI tools. We then walk you through the fixes that close each gap: schema markup, text files such as llms.txt, knowledge graph entries and business attributes. There is no obligation, and we refresh the results weekly.</p>
         </details>
         <details>
           <summary>Do you guarantee results?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
           <p class="faq__a">Yes. If your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, we refund all of your money.</p>
+        </details>
+        <details>
+          <summary>Can anyone guarantee ChatGPT will recommend my business?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">No one controls what an AI tool says. What we guarantee is your money: if your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of it back.</p>
         </details>
         <details>
           <summary>Do I need a new website?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
@@ -994,8 +1049,20 @@ img, svg { max-width: 100%; }
           <p class="faq__a">We ask ChatGPT, Gemini, Claude and other AI tools real customer questions from your category, record whether they name you, and report one AI visibility score every month. We also track the customers AI tools refer to you and the revenue those referrals convert into, and share both with you monthly.</p>
         </details>
         <details>
+          <summary>What is an AI visibility score?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">It is the percent of real customer questions where an AI tool names your business. We ask ChatGPT, Gemini, Claude and others the questions customers ask in your category, count every answer that names you, and report one score every month.</p>
+        </details>
+        <details>
+          <summary>How do you know a change worked, and not luck?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">AI answers change from day to day, so one check is a snapshot. We ask the same questions every week and judge the trend over at least three weeks before calling anything a result.</p>
+        </details>
+        <details>
           <summary>Who is PickMe AI for?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
           <p class="faq__a">Small businesses that want AI tools to send them customers: owners who want to be the name ChatGPT, Gemini, Claude and Perplexity recommend, and to turn those referrals into booked work and revenue. Local service businesses, shops, professional services and online brands.</p>
+        </details>
+        <details>
+          <summary>Do you work with businesses in my industry?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
+          <p class="faq__a">Yes. We work with businesses in any industry, with a focus on law firms, e-commerce brands and local businesses.</p>
         </details>
         <details>
           <summary>What do you actually change on my website?<span class="faq__icon" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span></summary>
@@ -1036,6 +1103,7 @@ img, svg { max-width: 100%; }
             <li><span class="contact__k">Schedule</span><a href="https://calendly.com/ben-peri3605/ai-visibility-check" data-book>Book a free info call</a></li>
             <li><span class="contact__k">Based in</span><span>Boston, MA · serving the U.S.</span></li>
             <li><span class="contact__k">Phone</span><a href="tel:+15135500184">513-550-0184</a></li>
+            <li><span class="contact__k">Hours</span><span>Monday to Sunday, 9:00 AM to 5:00 PM Eastern</span></li>
           </ul>
         </div>
       </div>
@@ -1090,7 +1158,7 @@ img, svg { max-width: 100%; }
         <a href="#contact">Contact us</a>
       </div>
     </div>
-    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC (PickMe AI, also known as BP AEO), a BP AI LLC company. All rights reserved. Last updated: November 1, 2026. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
+    <p class="footer__legal">© <span id="year">2026</span> BP Answer Engine Optimization Company LLC (PickMe AI, also known as BP AEO), a BP AI LLC company. All rights reserved. Last updated: November 8, 2026. ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, and Muse are trademarks of their respective owners. PickMe AI is not affiliated with them.</p>
   </div>
 </footer>
 

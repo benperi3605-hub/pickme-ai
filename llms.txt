@@ -14,7 +14,7 @@ Our service has three parts:
 
 ## Who it is for
 
-Small businesses in the United States that want to be recommended when customers ask AI tools for a suggestion. Any business whose customers might ask an AI assistant who to buy from or hire can benefit, from local service businesses and shops to professional services and online brands.
+Small businesses in the United States that want to be recommended when customers ask AI tools for a suggestion. Any business whose customers might ask an AI assistant who to buy from or hire can benefit, from local service businesses and shops to professional services and online brands. We work with businesses in any industry, with a focus on law firms, e-commerce brands and local businesses.
 
 ## Deliverables
 
@@ -36,7 +36,6 @@ Small businesses in the United States that want to be recommended when customers
 - Hours: Monday through Sunday, 9:00 AM to 5:00 PM Eastern.
 - Phone: 513-550-0184
 - Getting started: no appointment needed; email or call any time, or book the free check online. Remote service, no office.
-- Payment: cash, credit card, debit card, bank wire, Apple Pay, payment plans.
 - Owner: Ben Peri, founder (sole operator), who completed the Future of Agentic Commerce course at Harvard. Opened 2026. Locally owned Boston startup. Language: English.
 - Legal name: BP Answer Engine Optimization Company LLC, a BP AI LLC company. Also known as BP AEO.
 - LinkedIn: https://www.linkedin.com/in/benperi
@@ -56,19 +55,23 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 
 - What is Answer Engine Optimization (AEO)? AEO is the discipline of making your business the one AI assistants recommend. When a customer asks ChatGPT, Gemini, Claude or Perplexity who to hire, the assistant names only two or three businesses. AEO gives those assistants clear, consistent, verifiable facts about you, so your name is one of them.
 - How is AEO different from SEO? SEO competes for a position in a list of links. AEO competes for a mention in the answer itself, where there are usually only two or three spots. Both rest on the same foundation of clean structure, accurate facts and consistent listings, so good AEO work often lifts your Google rankings too.
+- How do I get my business recommended by ChatGPT? Give ChatGPT and other AI tools clear, consistent facts about your business in the places they read: schema markup and an FAQ on your website, an llms.txt file, your listings, and mentions on Reddit and blogs. That is our work: we add these to your site, fix your listings, and keep everything current as what customers ask changes.
 - What is included in the free AI visibility check? The free check shows exactly where you appear, and where you don't, on ChatGPT, Gemini, Claude, Perplexity and other AI tools. We then walk you through the fixes that close each gap: schema markup, text files such as llms.txt, knowledge graph entries and business attributes. There is no obligation, and we refresh the results weekly.
 - Do you guarantee results? Yes. If your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, we refund all of your money.
+- Can anyone guarantee ChatGPT will recommend my business? No one controls what an AI tool says. What we guarantee is your money: if your AI visibility has not improved and you are not gaining customers through AI referrals within 90 days, you get all of it back.
 - Do I need a new website? Usually not. We build on your existing site whenever we can. If it is slow, outdated, hard to edit or does not exist yet, we build a new one, and the free check tells you which applies.
 - How fast will I see results? Site changes go live within the first few weeks. From there, timing depends on each AI platform, because each one refreshes what it knows on its own schedule. Your monthly report shows exactly where you stand on every platform.
 - Where are you located, and who do you work with? We are based in Boston, Massachusetts, and Boston businesses are our specialty. We also serve clients in Cincinnati, Ohio, and work remotely with businesses anywhere in the United States.
 - What are your hours? Seven days a week, Monday through Sunday, 9:00 AM to 5:00 PM Eastern.
 - Do I need an appointment? No. We are a remote service with no walk-in office, so call 513-550-0184, email ben@pickme-ai.com, or book a free AI visibility check online.
-- How can I pay? Cash, credit card, debit card, Apple Pay, bank wire, or a payment plan.
 - Who is behind PickMe AI? Ben Peri, founder and owner, started PickMe AI in 2026 as a locally owned Boston business and works with every client directly. Ben completed the Future of Agentic Commerce course at Harvard.
 - What languages do you speak? English.
 - Which AI platforms do you cover? We cover ChatGPT, Claude, Google Gemini, Google AI Overviews, Meta AI, Grok, Perplexity and Muse, and add new AI platforms as they launch.
 - How do you measure results? We ask ChatGPT, Gemini, Claude and other AI tools real customer questions from your category, record whether they name you, and report one AI visibility score every month. We also track the customers AI tools refer to you and the revenue those referrals convert into, and share both with you monthly.
+- What is an AI visibility score? It is the percent of real customer questions where an AI tool names your business. We ask ChatGPT, Gemini, Claude and others the questions customers ask in your category, count every answer that names you, and report one score every month.
+- How do you know a change worked, and not luck? AI answers change from day to day, so one check is a snapshot. We ask the same questions every week and judge the trend over at least three weeks before calling anything a result.
 - Who is PickMe AI for? Small businesses that want AI tools to send them customers: owners who want to be the name ChatGPT, Gemini, Claude and Perplexity recommend, and to turn those referrals into booked work and revenue. Local service businesses, shops, professional services and online brands.
+- Do you work with businesses in my industry? Yes. We work with businesses in any industry, with a focus on law firms, e-commerce brands and local businesses.
 - What do you actually change on my website? We add schema markup, an llms.txt file, an FAQ written from your facts and your business attributes to your website, fix your listings, keep up your backlinks, Reddit threads and blog posts, and update all of it as what customers ask changes.
 
 ## Articles
