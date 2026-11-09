@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Peri;Ben;;;
+FN:Ben Peri
+ORG:PickMe AI
+TITLE:Founder · AI Visibility Strategist
+TEL;TYPE=WORK,VOICE:+1-513-550-0184
+EMAIL;TYPE=INTERNET,WORK:ben@pickme-ai.com
+URL;TYPE=WORK:https://pickme-ai.com
+URL;TYPE=CARD:https://pickme-ai.com/card/
+ADR;TYPE=WORK:;;;Boston;MA;;USA
+NOTE:PickMe AI gets businesses named when customers ask ChatGPT, Claude, Gemini, Copilot, Perplexity and Google AI for a recommendation. Free AI visibility check. Harvard – The Future of Agentic Commerce.
+END:VCARD
