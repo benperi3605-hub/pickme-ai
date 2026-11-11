@@ -76,6 +76,4 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 
 ## Articles
 
-- [I asked Claude 100 questions about AEO agencies in Boston, three weeks running](https://pickme-ai.com/blog/what-ai-tools-say-about-aeo-agencies-in-boston/): Which agencies Claude named over three weekly runs, the exact pages it cited, and what that means for any business trying to show up in AI answers. Measured data, no estimates.
-- [AEO agencies in Boston: who does AI visibility work, in their own words](https://pickme-ai.com/blog/aeo-agencies-boston/): Seven Boston-area agencies that offer AEO, GEO or AI search optimization, in alphabetical order, with what each says it does; PickMe AI is one of them.
 - [How to get your business recommended by ChatGPT, Gemini and Claude](https://pickme-ai.com/blog/how-to-get-your-business-recommended-by-chatgpt/): What actually makes an AI assistant name a small business, what we change on a website to get there, and how to measure whether it worked.
