@@ -44,10 +44,10 @@ Small businesses in the United States that want to be recommended when customers
 
 Book a free AI Visibility Check with PickMe AI. On the call we show the owner what ChatGPT, Claude, and Gemini say today when customers ask about businesses like theirs.
 
-- [Website](https://pickme-ai.com/)
+- [Website](https://pickme-ai.com/?utm_source=llms.txt&utm_medium=ai-referral)
 - [Book a free AI visibility check](https://calendly.com/ben-peri3605/ai-visibility-check)
-- [Contact](https://pickme-ai.com/#contact)
-- [FAQ](https://pickme-ai.com/#faq)
+- [Contact](https://pickme-ai.com/?utm_source=llms.txt&utm_medium=ai-referral#contact)
+- [FAQ](https://pickme-ai.com/?utm_source=llms.txt&utm_medium=ai-referral#faq)
 - Email: ben@pickme-ai.com
 - Phone: 513-550-0184
 
@@ -76,4 +76,4 @@ Book a free AI Visibility Check with PickMe AI. On the call we show the owner wh
 
 ## Articles
 
-- [How to get your business recommended by ChatGPT, Gemini and Claude](https://pickme-ai.com/blog/how-to-get-your-business-recommended-by-chatgpt/): What actually makes an AI assistant name a small business, what we change on a website to get there, and how to measure whether it worked.
+- [How to get your business recommended by ChatGPT, Gemini and Claude](https://pickme-ai.com/blog/how-to-get-your-business-recommended-by-chatgpt/?utm_source=llms.txt&utm_medium=ai-referral): What actually makes an AI assistant name a small business, what we change on a website to get there, and how to measure whether it worked.
