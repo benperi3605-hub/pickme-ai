@@ -43,8 +43,9 @@ h2{font:700 20px/1.2 var(--display);margin:0;text-wrap:balance}
 .box svg{width:16px;height:16px;opacity:0}
 .task.on{border-color:var(--ok);background:var(--ok-soft)}
 .task.on .box{background:var(--ok);border-color:var(--ok)}
-.task.on .box svg{opacity:1}
-.task:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.task.on .box svg,.box.done svg{opacity:1}
+.task:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+*{-webkit-tap-highlight-color:transparent}
 .task-body{min-width:0;display:flex;flex-direction:column;gap:4px}
 .task-title{font-weight:600}
 .task-how{font-size:14px;color:var(--muted)}
@@ -103,7 +104,7 @@ footer a{color:var(--navy)}
 
   <section class="step" id="s1">
     <div class="step-head"><span class="num">1</span><h2>Give me access</h2></div>
-    <p class="hint">Each one is an invite to <b>ben@pickme-ai.com</b>. You never share a password, and you can remove me any time. Tap a box once it's done.</p>
+    <p class="hint">Each one sends an invite to <b class="addr">ben@pickme-ai.com</b> <button type="button" class="btn small" id="copyEmail" style="min-height:32px;padding:6px 10px">Copy email</button><br>You never share a password, and you can remove me any time. Tap the box when you finish each one. Stuck? Text me a screenshot of the screen.</p>
     <div id="access"></div>
   </section>
 
@@ -221,14 +222,14 @@ function task(parent,key,title,how,extraPh){
 // STEP 1
 const A=$("access"); A.style.display="flex";A.style.flexDirection="column";A.style.gap="10px";
 const steps=a=>"<ol>"+a.map(s=>"<li>"+s+"</li>").join("")+"</ol>";
-task(A,"acc_sq","Website: add me as Administrator",steps(["Log in to Squarespace","Settings, then Permissions &amp; Ownership","Invite Contributor: ben@pickme-ai.com","Choose Administrator, then Invite"]));
-task(A,"acc_gsb","Google, South Boston shop: add me as Manager",steps(["Google \"Skip's Barbershop South Boston\" while logged in","Three-dot menu, then Business Profile settings","People and access, then Add","ben@pickme-ai.com, choose Manager"]));
-task(A,"acc_gse","Google, South End shop: same steps","");
-task(A,"acc_gpvd","Google, Providence shop: same steps (if Providence is part of this)","");
-task(A,"acc_apple","Apple Maps (Apple Business Connect): add ben@pickme-ai.com","If you don't know whether you have an account, type \"not sure\" below.","Not sure? Type it here");
-task(A,"acc_bing","Bing (Bing Places): add ben@pickme-ai.com","","Not sure? Type it here");
-task(A,"acc_yelp","Yelp for Business: add ben@pickme-ai.com","","Not sure? Type it here");
-task(A,"acc_squire","Squire: tell me who edits your shop pages and prices","","Name or email of who runs Squire");
+task(A,"acc_sq","Website: add me as Administrator","<b>About 2 minutes.</b>"+steps(["On your phone, open <b>Safari</b> (not the Squarespace app) and go to <b>squarespace.com</b>. Tap <b>Log in</b>.","Tap your <b>Skip's</b> website.","Tap <b>Settings</b>, then <b>Permissions &amp; Ownership</b>.","Tap <b>Invite Contributor</b>.","Name: <b>Ben Peri</b>. Email: <b>ben@pickme-ai.com</b>","Turn on <b>Administrator</b>, then tap <b>Invite</b>."]));
+task(A,"acc_gsb","Google, South Boston shop: add me as Manager","<b>About 1 minute.</b>"+steps(["Open the <b>Google</b> app (or Chrome). Make sure you're signed in to the Google account that runs your shop's listing.","Search: <b>my business</b>. Your shops show up at the top. Tap <b>South Boston</b>.","Tap the <b>&#8942;</b> (three dots), then <b>Business Profile settings</b>.","Tap <b>People and access</b>, then <b>Add</b>.","Type <b>ben@pickme-ai.com</b>, choose <b>Manager</b>, tap <b>Invite</b>."]));
+task(A,"acc_gse","Google, South End shop: same 5 steps","In step 2, tap <b>South End</b> instead.");
+task(A,"acc_gpvd","Google, Providence shop: same 5 steps","Only if Providence is part of this. In step 2, tap <b>Providence</b>.");
+task(A,"acc_yelp","Yelp: add me as a user","<b>About 1 minute.</b> Skip this if you don't use Yelp."+steps(["In <b>Safari</b>, go to <b>biz.yelp.com</b> and log in.","Tap your <b>profile picture</b> (top right), then <b>Account Settings</b>.","Tap <b>User Management</b>, then <b>Invite user</b>.","Type <b>ben@pickme-ai.com</b>, pick your Skip's page, tap <b>Invite</b>. Do it once for each shop."]),"No Yelp account? Type that here");
+A.appendChild(el("div",{class:"task",style:"cursor:default",html:'<span class="box done" style="border-color:var(--ok);background:var(--ok)">'+CHECK.replace('opacity:0','')+'</span><span class="task-body"><span class="task-title">Bing: nothing to do</span><span class="task-how">Once I\'m on your Google listing, I copy it into Bing myself.</span></span>'}));
+task(A,"acc_apple","Apple Maps: tell me if you have an account","Most shops don't. Type <b>yes</b>, <b>no</b> or <b>not sure</b> below. If yes, I'll text you two quick steps.","yes / no / not sure");
+task(A,"acc_squire","Squire: tell me who can change your shop pages and prices","Just type a name or email below. Nothing to click.","Who runs Squire?");
 task(A,"acc_track","Yes to free visit tracking on the website","I install it. Your monthly report then shows visits that come from AI tools.");
 
 // STEP 2
@@ -326,7 +327,7 @@ function line(label,val){return label+": "+(val||"(blank)")}
 function compile(){
   const o=["SKIP'S BARBERSHOP - INFO SHEET ANSWERS",""];
   o.push("STEP 1 - ACCESS");
-  [["acc_sq","Website Administrator"],["acc_gsb","Google South Boston Manager"],["acc_gse","Google South End Manager"],["acc_gpvd","Google Providence Manager"],["acc_apple","Apple Maps"],["acc_bing","Bing"],["acc_yelp","Yelp"],["acc_squire","Squire"],["acc_track","Visit tracking OK"]].forEach(([k,l])=>o.push("["+(S[k]?"x":" ")+"] "+l+(v(k+"_note")?" - "+v(k+"_note"):"")));
+  [["acc_sq","Website Administrator invite sent"],["acc_gsb","Google South Boston Manager invite sent"],["acc_gse","Google South End Manager invite sent"],["acc_gpvd","Google Providence Manager invite sent"],["acc_yelp","Yelp invite sent"],["acc_apple","Apple Maps"],["acc_squire","Squire"],["acc_track","Visit tracking OK"]].forEach(([k,l])=>o.push("["+(S[k]?"x":" ")+"] "+l+(v(k+"_note")?" - "+v(k+"_note"):"")));
   o.push("","STEP 2 - FACTS");
   const ch=(k)=>[v(k),v(k+"_x")].filter(Boolean).join(" - ");
   o.push(line("Name spelling",ch("name")),line("Owner as shown",v("owner")),line("Year opened",v("year")),line("Story behind the name",v("story")),line("Providence in scope",v("providence")),line("Providence phone",v("pvd_phone")),line("Phones correct",ch("phones_ok")),line("Customer email",ch("email_ok")),line("Squire for all shops",ch("squire_all")));
@@ -349,6 +350,7 @@ progress();
 $("mailLink").addEventListener("click",()=>{ $("mailLink").href="mailto:ben@pickme-ai.com?subject="+encodeURIComponent("Skip's info sheet answers")+"&body="+encodeURIComponent(compile()) });
 
 function status(msg,warn){const s=$("sendStatus");s.hidden=false;s.className="status"+(warn?" warn":"");s.textContent=msg}
+$("copyEmail").addEventListener("click",()=>{const b=$("copyEmail");try{navigator.clipboard.writeText("ben@pickme-ai.com").then(()=>{b.textContent="Copied"},()=>{})}catch(e){}});
 $("copyBtn").addEventListener("click",()=>{
   const t=compile();
   const done=()=>status("Copied. Now reply to Ben's email and paste.");
