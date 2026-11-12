@@ -9,8 +9,8 @@ Answer Engine Optimization (AEO) is the work of making a business easy for AI mo
 Our service has three parts:
 
 1. Audit: We check whether ChatGPT, Claude, and other AI tools currently mention the business, and who they recommend instead.
-2. Build: We build onto the existing website, or build a new one if the business does not have one, with the structured data, attributes, and content AI models read: business details, services, products, FAQs, reviews, and location. This includes schema.org markup, clean page structure, and an llms.txt file.
-3. Update daily: We track what customers are asking AI in the business's category and update the site's attributes and content daily so it keeps showing up.
+2. Build: We build onto the existing website, or build a new one if the business does not have one, with the structured data, attributes, and content AI models read: business details, services, products, FAQs, and location. This includes schema.org markup, clean page structure, and an llms.txt file.
+3. Update weekly: We track what customers are asking AI in the business's category and update the site's attributes and content weekly so it keeps showing up.
 
 ## Who it is for
 
@@ -21,7 +21,7 @@ Small businesses in the United States that want to be recommended when customers
 - AI visibility audit across major assistants (ChatGPT, Claude, Gemini, Meta AI, Grok, Perplexity, Muse)
 - Website built onto for AI readability (or built new if needed): schema markup, clean structure, llms.txt
 - Business attributes and categories tuned to what customers actually ask
-- Daily updates based on trending questions in the business's category
+- Weekly updates based on trending questions in the business's category
 - Monthly report showing where the business appears in AI answers and how that is changing
 - One point of contact, no long-term contracts
 
