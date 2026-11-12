@@ -1,0 +1,369 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#b3132b"><link rel="icon" href="/favicon.svg">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Skip's Barbershop Info Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow column built for a phone thumb; sticky progress bar; one card per step; send panel at the end. */
+:root{
+  --bg:#f3f5f8; --card:#ffffff; --ink:#152036; --muted:#5d6779; --line:#dde2ea;
+  --accent:#b3132b; --accent-ink:#ffffff; --accent-soft:#fbe9ec; --navy:#1d2f52; --ok:#1f7a4d; --ok-soft:#e3f3ea;
+  --field:#f7f8fb;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1522; --card:#172033; --ink:#e8ecf3; --muted:#a3adbf; --line:#2a3550;
+  --accent:#ef4d62; --accent-ink:#ffffff; --accent-soft:#3a1d27; --navy:#9fb5e0; --ok:#5fcf95; --ok-soft:#153325; --field:#111a2b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1522; --card:#172033; --ink:#e8ecf3; --muted:#a3adbf; --line:#2a3550;
+  --accent:#ef4d62; --accent-ink:#ffffff; --accent-soft:#3a1d27; --navy:#9fb5e0; --ok:#5fcf95; --ok-soft:#153325; --field:#111a2b; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header.hero{padding-top:20px;display:flex;flex-direction:column;gap:8px}
+.pole{display:flex;gap:6px;align-items:center;font:600 12px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pole i{width:22px;height:8px;border-radius:4px;background:repeating-linear-gradient(135deg,var(--accent) 0 5px,var(--card) 5px 9px,var(--navy) 9px 14px,var(--card) 14px 18px);border:1px solid var(--line)}
+h1{font:800 30px/1.1 var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+.lede{margin:0;color:var(--muted)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line)}
+.bar-row{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px}
+.bar-row b{font-variant-numeric:tabular-nums}
+.track{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:6px}
+.track span{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.saved{color:var(--muted);font-size:13px}
+section.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:14px}
+.step-head{display:flex;gap:12px;align-items:baseline}
+.num{flex:none;font:800 13px/1 var(--display);color:var(--accent-ink);background:var(--accent);border-radius:6px;padding:5px 7px}
+h2{font:700 20px/1.2 var(--display);margin:0;text-wrap:balance}
+.hint{margin:0;color:var(--muted);font-size:14px}
+.task{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--field);cursor:pointer}
+.task input[type=checkbox]{position:absolute;opacity:0;pointer-events:none}
+.box{flex:none;width:28px;height:28px;border-radius:8px;border:2px solid var(--muted);display:grid;place-items:center;margin-top:1px;transition:background .15s,border-color .15s}
+.box svg{width:16px;height:16px;opacity:0}
+.task.on{border-color:var(--ok);background:var(--ok-soft)}
+.task.on .box{background:var(--ok);border-color:var(--ok)}
+.task.on .box svg,.box.done svg{opacity:1}
+.task:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+*{-webkit-tap-highlight-color:transparent}
+.task-body{min-width:0;display:flex;flex-direction:column;gap:4px}
+.task-title{font-weight:600}
+.task-how{font-size:14px;color:var(--muted)}
+.task-how ol{margin:4px 0 0;padding-left:20px}
+.q{display:flex;flex-direction:column;gap:6px}
+.q label,.q .lbl{font-weight:600;font-size:15px}
+.q small{color:var(--muted);font-size:13px;font-weight:400}
+input[type=text],input[type=tel],input[type=email],textarea{width:100%;font:16px/1.4 var(--body);color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:10px;padding:12px}
+textarea{min-height:52px;resize:vertical}
+input:focus,textarea:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:transparent}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 15px/1 var(--body);padding:11px 14px;border-radius:999px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;min-height:44px}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--card)}
+.chip:focus-visible,.btn:focus-visible,.tab:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.tab{flex:1 1 0;min-width:0;white-space:nowrap;font:600 14px/1 var(--body);padding:10px 6px;border-radius:10px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.days{display:grid;grid-template-columns:96px 1fr;gap:8px 10px;align-items:center}
+.days span{font-weight:600;font-size:15px}
+.price{border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--field)}
+.price-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.price-top b{font-weight:600}
+.price-top em{font-style:normal;font-variant-numeric:tabular-nums;color:var(--muted);flex:none}
+.price .chip{background:var(--card);padding:10px 12px;font-size:14px}
+.price .chip[aria-pressed="true"]{background:var(--navy);color:var(--card)}
+.mini{font-size:13px;color:var(--muted)}
+.barber{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px;border:1px solid var(--line);border-radius:12px}
+.barber input:first-child{grid-column:1/-1}
+.btn{font:600 16px/1 var(--body);border-radius:12px;padding:14px 16px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;min-height:48px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.small{font-size:14px;padding:10px 12px;min-height:40px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btns .btn{flex:1 1 180px}
+.status{font-size:14px;padding:10px 12px;border-radius:10px;background:var(--ok-soft);color:var(--ok)}
+.status.warn{background:var(--accent-soft);color:var(--accent)}
+pre.out{white-space:pre-wrap;word-break:break-word;font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;background:var(--field);border:1px solid var(--line);border-radius:10px;padding:12px;max-height:260px;overflow:auto;margin:0}
+.addr{font-weight:600;user-select:all}
+footer{color:var(--muted);font-size:14px;text-align:center;padding-top:8px}
+footer a{color:var(--navy)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head><body>
+
+
+<div class="wrap">
+  <header class="hero">
+    <div class="pole"><i aria-hidden="true"></i>PickMe AI for Skip's Barbershop</div>
+    <h1>Your info sheet, Anthony</h1>
+    <p class="lede">Everything I need to get Skip's named when people ask AI where to get a haircut. Tap the boxes, type your answers, then hit Send at the bottom. It saves as you go, so you can stop and come back. Skip anything you're not sure about. About 15 minutes.</p>
+  </header>
+
+  <div class="bar" role="status" aria-live="polite">
+    <div class="bar-row"><span><b id="done">0</b> of <b id="total">0</b> answered</span><span class="saved" id="saved">Saves on this phone as you type</span></div>
+    <div class="track"><span id="fill"></span></div>
+  </div>
+
+  <section class="step" id="s1">
+    <div class="step-head"><span class="num">1</span><h2>Give me access</h2></div>
+    <p class="hint">Each one sends an invite to <b class="addr">ben@pickme-ai.com</b> <button type="button" class="btn small" id="copyEmail" style="min-height:32px;padding:6px 10px">Copy email</button><br>You never share a password, and you can remove me any time. Tap the box when you finish each one. Stuck? Text me a screenshot of the screen.</p>
+    <div id="access"></div>
+  </section>
+
+  <section class="step" id="s2">
+    <div class="step-head"><span class="num">2</span><h2>Your business facts</h2></div>
+    <p class="hint">I'll use these exact words on the website and every listing, so they all match.</p>
+    <div id="facts" class="wrap" style="gap:16px"></div>
+  </section>
+
+  <section class="step" id="s3">
+    <div class="step-head"><span class="num">3</span><h2>Hours for each shop</h2></div>
+    <p class="hint">Your listings disagree today. Google shows the South End opening at midnight on Tuesdays. Type the real hours, like "10 to 7", or "closed".</p>
+    <div class="tabs" role="tablist" id="shoptabs"></div>
+    <div id="hours"></div>
+  </section>
+
+  <section class="step" id="s4">
+    <div class="step-head"><span class="num">4</span><h2>Services and prices</h2></div>
+    <p class="hint">This is what your Squire page shows today, and ChatGPT already quotes it. Tap Correct, or tap Different and type the right price.</p>
+    <div id="prices" class="wrap" style="gap:10px"></div>
+    <div class="q"><label for="other_services">Anything missing? List other services and prices</label><textarea id="other_services" data-k="other_services"></textarea></div>
+  </section>
+
+  <section class="step" id="s5">
+    <div class="step-head"><span class="num">5</span><h2>Questions customers ask AI</h2></div>
+    <p class="hint">These become a short Q&amp;A on your website. On most of them ChatGPT named other shops, not Skip's. A few words is fine; I'll write it up and you approve the wording.</p>
+    <div id="faq" class="wrap" style="gap:16px"></div>
+  </section>
+
+  <section class="step" id="s6">
+    <div class="step-head"><span class="num">6</span><h2>About Skip's and your barbers</h2></div>
+    <div class="q"><label for="own_words">What makes Skip's different? <small>One or two sentences. I'll use them exactly as you write them.</small></label><textarea id="own_words" data-k="own_words" rows="3"></textarea></div>
+    <div class="q"><span class="lbl">Your barbers <small>Only the ones happy to be named.</small></span><div id="barbers" class="wrap" style="gap:10px"></div><button type="button" class="btn small" id="addBarber">+ Add a barber</button></div>
+    <div class="q"><label for="press">Press, awards or features <small>Only things you can point to, with a link if you have one.</small></label><textarea id="press" data-k="press"></textarea></div>
+  </section>
+
+  <section class="step" id="s7">
+    <div class="step-head"><span class="num">7</span><h2>Listings and website clean-up</h2></div>
+    <div id="listings" class="wrap" style="gap:16px"></div>
+  </section>
+
+  <section class="step" id="send">
+    <div class="step-head"><span class="num">&#10003;</span><h2>Send it to Ben</h2></div>
+    <p class="hint">Tap Send to Ben: your email app opens with every answer filled in, and you just hit Send. You can also copy them and text them to me.</p>
+    <div class="btns">
+      <button type="button" class="btn primary" id="sendBtn">Send to Ben</button>
+      <button type="button" class="btn" id="copyBtn">Copy my answers</button>
+    </div>
+    <div id="sendStatus" hidden></div>
+    <p class="mini">Or email them to <span class="addr">ben@pickme-ai.com</span> &middot; <a id="mailLink" href="mailto:ben@pickme-ai.com">open email</a></p>
+    <details><summary class="mini">See what gets sent</summary><pre class="out" id="out"></pre></details>
+  </section>
+
+  <footer>Sincerely, Ben &middot; PickMe AI &middot; <a href="https://pickme-ai.com" target="_blank" rel="noopener">PickMe-AI.com</a></footer>
+</div>
+
+<script>
+(function(){
+const KEY="skips-info-sheet-v1";
+let S={};
+try{S=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){S={}}
+if(!S.barbers) S.barbers=[{},{}];
+let saveT;
+function save(){ clearTimeout(saveT); saveT=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify(S));document.getElementById("saved").textContent="Saved on this phone"}catch(e){document.getElementById("saved").textContent="Not saved: keep this page open"}},300); progress(); }
+const $=id=>document.getElementById(id);
+const el=(t,a={},...kids)=>{const n=document.createElement(t);for(const[k,v]of Object.entries(a)){if(k==="text")n.textContent=v;else if(k==="html")n.innerHTML=v;else n.setAttribute(k,v)}kids.forEach(c=>c&&n.appendChild(c));return n};
+const CHECK='<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const COUNTED=[]; // keys that count toward progress
+
+function textQ(parent,key,label,opts={}){
+  COUNTED.push(key);
+  const q=el("div",{class:"q"});
+  const lab=el("label",{for:key}); lab.textContent=label; if(opts.note){lab.appendChild(document.createTextNode(" "));lab.appendChild(el("small",{text:opts.note}))}
+  const inp=opts.long?el("textarea",{id:key,rows:"2"}):el("input",{id:key,type:opts.type||"text",autocomplete:"off"});
+  if(opts.ph) inp.placeholder=opts.ph;
+  inp.value=S[key]||"";
+  inp.addEventListener("input",()=>{S[key]=inp.value;save()});
+  q.append(lab,inp); parent.appendChild(q); return q;
+}
+function chipQ(parent,key,label,choices,opts={}){
+  COUNTED.push(key);
+  const q=el("div",{class:"q"});
+  const lab=el("span",{class:"lbl",id:key+"_l",text:label}); if(opts.note){lab.appendChild(document.createTextNode(" "));lab.appendChild(el("small",{text:opts.note}))}
+  const row=el("div",{class:"chips",role:"group","aria-labelledby":key+"_l"});
+  const multi=!!opts.multi;
+  const cur=()=>multi?(S[key]||[]):S[key];
+  choices.forEach(c=>{
+    const b=el("button",{type:"button",class:"chip"}); b.textContent=c;
+    const sync=()=>b.setAttribute("aria-pressed",multi?String(cur().includes(c)):String(cur()===c));
+    b.addEventListener("click",()=>{
+      if(multi){const a=new Set(cur()); a.has(c)?a.delete(c):a.add(c); S[key]=[...a]} else { S[key]= S[key]===c?"":c }
+      row.querySelectorAll(".chip").forEach(x=>x._sync()); if(opts.onChange)opts.onChange(); save();
+    });
+    b._sync=sync; sync(); row.appendChild(b);
+  });
+  q.append(lab,row);
+  if(opts.extra){ const x=el("input",{type:"text",id:key+"_x",placeholder:opts.extra}); x.value=S[key+"_x"]||""; x.addEventListener("input",()=>{S[key+"_x"]=x.value;save()}); q.appendChild(x); }
+  parent.appendChild(q); return q;
+}
+function task(parent,key,title,how,extraPh){
+  COUNTED.push(key);
+  const lab=el("label",{class:"task"});
+  const cb=el("input",{type:"checkbox",id:key});
+  const box=el("span",{class:"box",html:CHECK});
+  const body=el("span",{class:"task-body"});
+  body.appendChild(el("span",{class:"task-title",text:title}));
+  if(how) body.appendChild(el("span",{class:"task-how",html:how}));
+  lab.append(cb,box,body);
+  const sync=()=>{cb.checked=!!S[key];lab.classList.toggle("on",cb.checked)};
+  cb.addEventListener("change",()=>{S[key]=cb.checked;sync();save()});
+  sync(); parent.appendChild(lab);
+  if(extraPh){ const x=el("input",{type:"text",id:key+"_note",placeholder:extraPh,style:"margin:-4px 0 4px"}); x.value=S[key+"_note"]||""; x.addEventListener("input",()=>{S[key+"_note"]=x.value;save()}); parent.appendChild(x); }
+}
+
+// STEP 1
+const A=$("access"); A.style.display="flex";A.style.flexDirection="column";A.style.gap="10px";
+const steps=a=>"<ol>"+a.map(s=>"<li>"+s+"</li>").join("")+"</ol>";
+task(A,"acc_sq","Website: add me as Administrator","<b>About 2 minutes.</b>"+steps(["On your phone, open <b>Safari</b> (not the Squarespace app) and go to <b>squarespace.com</b>. Tap <b>Log in</b>.","Tap your <b>Skip's</b> website.","Tap <b>Settings</b>, then <b>Permissions &amp; Ownership</b>.","Tap <b>Invite Contributor</b>.","Name: <b>Ben Peri</b>. Email: <b>ben@pickme-ai.com</b>","Turn on <b>Administrator</b>, then tap <b>Invite</b>."]));
+task(A,"acc_gsb","Google, South Boston shop: add me as Manager","<b>About 1 minute.</b>"+steps(["Open the <b>Google</b> app (or Chrome). Make sure you're signed in to the Google account that runs your shop's listing.","Search: <b>my business</b>. Your shops show up at the top. Tap <b>South Boston</b>.","Tap the <b>&#8942;</b> (three dots), then <b>Business Profile settings</b>.","Tap <b>People and access</b>, then <b>Add</b>.","Type <b>ben@pickme-ai.com</b>, choose <b>Manager</b>, tap <b>Invite</b>."]));
+task(A,"acc_gse","Google, South End shop: same 5 steps","In step 2, tap <b>South End</b> instead.");
+task(A,"acc_gpvd","Google, Providence shop: same 5 steps","Only if Providence is part of this. In step 2, tap <b>Providence</b>.");
+task(A,"acc_yelp","Yelp: add me as a user","<b>About 1 minute.</b> Skip this if you don't use Yelp."+steps(["In <b>Safari</b>, go to <b>biz.yelp.com</b> and log in.","Tap your <b>profile picture</b> (top right), then <b>Account Settings</b>.","Tap <b>User Management</b>, then <b>Invite user</b>.","Type <b>ben@pickme-ai.com</b>, pick your Skip's page, tap <b>Invite</b>. Do it once for each shop."]),"No Yelp account? Type that here");
+A.appendChild(el("div",{class:"task",style:"cursor:default",html:'<span class="box done" style="border-color:var(--ok);background:var(--ok)">'+CHECK.replace('opacity:0','')+'</span><span class="task-body"><span class="task-title">Bing: nothing to do</span><span class="task-how">Once I\'m on your Google listing, I copy it into Bing myself.</span></span>'}));
+task(A,"acc_apple","Apple Maps: tell me if you have an account","Most shops don't. Type <b>yes</b>, <b>no</b> or <b>not sure</b> below. If yes, I'll text you two quick steps.","yes / no / not sure");
+task(A,"acc_squire","Squire: tell me who can change your shop pages and prices","Just type a name or email below. Nothing to click.","Who runs Squire?");
+task(A,"acc_track","Yes to free visit tracking on the website","I install it. Your monthly report then shows visits that come from AI tools.");
+
+// STEP 2
+const F=$("facts");
+chipQ(F,"name","How should the name be spelled everywhere?",["Skip's Barbershop","Skips Barbershop"],{extra:"Or type it another way"});
+textQ(F,"owner","Your name as you'd like it shown",{ph:"e.g. Anthony, owner (leave blank to stay off the site)"});
+textQ(F,"year","Year Skip's first opened",{type:"tel",ph:"e.g. 1985"});
+textQ(F,"story","Is there a story behind the name \"Skip's\"?",{long:true,note:"ChatGPT ties it to a barber named Bobby \"Skip\" Scaro. Is that right?"});
+chipQ(F,"providence","Is Providence part of this work?",["Yes, all three shops","Boston shops only"]);
+textQ(F,"pvd_phone","Providence phone number",{type:"tel",note:"The website shows none."});
+chipQ(F,"phones_ok","Are these still right? South Boston (617) 269-2227 and South End (617) 982-7981",["Yes","No"],{extra:"If no, the right numbers"});
+chipQ(F,"email_ok","Email to show customers: skipsbarbershopboston@gmail.com",["Keep it","Use another"],{extra:"Other email"});
+chipQ(F,"squire_all","Is Squire your booking app for all three shops?",["Yes","No"],{extra:"If no, which app?"});
+
+// STEP 3
+const SHOPS=[["sb","South Boston","78 Dorchester St"],["se","South End","603 Tremont St"],["pvd","Providence","556 Atwells Ave"]];
+const DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+const tabs=$("shoptabs"), H=$("hours"); let curShop=S._tab||"sb";
+SHOPS.forEach(([k,n,a])=>{
+  const t=el("button",{type:"button",class:"tab",role:"tab",id:"tab_"+k}); t.textContent=n;
+  t.addEventListener("click",()=>{curShop=k;S._tab=k;showShop();save()}); tabs.appendChild(t);
+  const pane=el("div",{id:"pane_"+k,role:"tabpanel"}); pane.style.display="flex";pane.style.flexDirection="column";pane.style.gap="10px";
+  pane.appendChild(el("p",{class:"mini",text:a}));
+  const g=el("div",{class:"days"});
+  DAYS.forEach(d=>{const key="h_"+k+"_"+d.slice(0,3).toLowerCase(); COUNTED.push(key);
+    const lab=el("span"); lab.textContent=d; const lid=key; const inp=el("input",{type:"text",id:lid,placeholder:"10 to 7, or closed","aria-label":n+" "+d});
+    inp.value=S[key]||""; inp.addEventListener("input",()=>{S[key]=inp.value;save()}); g.append(lab,inp)});
+  pane.appendChild(g);
+  if(k!=="sb"){const cp=el("button",{type:"button",class:"btn small"}); cp.textContent="Same hours as South Boston"; cp.addEventListener("click",()=>{DAYS.forEach(d=>{const s=d.slice(0,3).toLowerCase();S["h_"+k+"_"+s]=S["h_sb_"+s]||"";$("h_"+k+"_"+s).value=S["h_"+k+"_"+s]});save()}); pane.appendChild(cp)}
+  const hol=el("input",{type:"text",id:"hol_"+k,placeholder:"Holiday hours or closures"}); hol.value=S["hol_"+k]||""; hol.addEventListener("input",()=>{S["hol_"+k]=hol.value;save()}); pane.appendChild(hol);
+  H.appendChild(pane);
+});
+function showShop(){SHOPS.forEach(([k])=>{$("pane_"+k).hidden=k!==curShop;$("tab_"+k).setAttribute("aria-selected",String(k===curShop))})}
+showShop();
+
+// STEP 4
+const PR=[["Classic Cut","$56"],["Buzz Cut / Kids / Senior","$41"],["Scissors Cut","$77"],["Beard Trim (No Shave)","$47"],["Classic Cut + Beard Trim","$78"],["Deluxe Cut + Beard (with Shave)","$100"],["Deluxe Cut + Face Shave","$100"],["Executive Service (90 mins)","$150"]];
+const P=$("prices");
+PR.forEach(([n,p],i)=>{
+  const key="p"+i; COUNTED.push(key);
+  const card=el("div",{class:"price"});
+  const top=el("div",{class:"price-top"}); top.append(el("b",{text:n}),el("em",{text:"Squire: "+p}));
+  const row=el("div",{class:"chips",role:"group","aria-label":n+" price"});
+  const fix=el("input",{type:"text",id:key+"_fix",placeholder:"Right price"}); fix.value=S[key+"_fix"]||""; fix.addEventListener("input",()=>{S[key+"_fix"]=fix.value;save()});
+  const sameRow=el("div",{class:"chips",role:"group","aria-label":n+" same at every shop"});
+  const sync=()=>{row.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",String(S[key]===b.textContent)));fix.hidden=S[key]!=="Different";sameRow.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",String(S[key+"_same"]===b.dataset.v)))};
+  ["Correct","Different"].forEach(c=>{const b=el("button",{type:"button",class:"chip"});b.textContent=c;b.addEventListener("click",()=>{S[key]=S[key]===c?"":c;sync();save()});row.appendChild(b)});
+  [["yes","Same all shops"],["no","Varies by shop"]].forEach(([v,t])=>{const b=el("button",{type:"button",class:"chip"});b.dataset.v=v;b.textContent=t;b.addEventListener("click",()=>{S[key+"_same"]=S[key+"_same"]===v?"":v;sync();save()});sameRow.appendChild(b)});
+  card.append(top,row,fix,sameRow); P.appendChild(card); sync();
+});
+COUNTED.push("other_services");
+$("other_services").value=S.other_services||""; $("other_services").addEventListener("input",e=>{S.other_services=e.target.value;save()});
+
+// STEP 5
+const FAQ=["Do you take walk-ins? At which shops?","Do you cut kids' hair? From what age?","Do you do fades and tapers (skin, low, mid, high)? Lineups?","Do you cut curly or textured hair? Any barber who's best at it?","Do you do longer hair and all-scissor cuts?","Which shaves do you offer (face, head, hot towel)? What's included?","Can someone book a beard trim on its own?","How far ahead should people book? Is same-day possible?","Cancellation or late policy?","How can customers pay (cash, card, Apple Pay)? Can they tip by card?","Parking near each shop?","Nearest T stop to each shop?","Is each shop wheelchair-accessible?","Do you offer gift cards?","Do you take groups (weddings, events)?","Languages your barbers speak?","Products you use or sell?"];
+const FQ=$("faq");
+FAQ.forEach((q,i)=>textQ(FQ,"faq"+(i+1),(i+1)+". "+q,{long:true}));
+
+// STEP 6
+COUNTED.push("own_words","press","barbers");
+["own_words","press"].forEach(k=>{$(k).value=S[k]||"";$(k).addEventListener("input",e=>{S[k]=e.target.value;save()})});
+function drawBarbers(){
+  const B=$("barbers"); B.innerHTML="";
+  S.barbers.forEach((b,i)=>{
+    const row=el("div",{class:"barber"});
+    [["name","Barber's name"],["shop","Shop"],["known","Known for (fades, shaves...)"],["years","Years cutting"]].forEach(([f,ph])=>{
+      const inp=el("input",{type:"text",id:"b"+i+"_"+f,placeholder:ph,"aria-label":"Barber "+(i+1)+" "+ph}); inp.value=b[f]||""; inp.addEventListener("input",()=>{S.barbers[i][f]=inp.value;save()}); row.appendChild(inp)});
+    B.appendChild(row);
+  });
+}
+drawBarbers();
+$("addBarber").addEventListener("click",()=>{S.barbers.push({});drawBarbers();save();$("b"+(S.barbers.length-1)+"_name").focus()});
+
+// STEP 7
+const L=$("listings");
+chipQ(L,"accounts","Which of these do you have an account for?",["Google","Apple Maps","Bing","Yelp","Squire","Facebook","Instagram"],{multi:true,note:"Tap all that apply.",extra:"Any other?"});
+textQ(L,"old_listings","Any old or duplicate listings I should ask to close?",{long:true,note:"For example an old \"Skip Scaro's Barber Shop\" entry on MapQuest."});
+chipQ(L,"template","Your website still has sample pages from its template (a 2014 music blog, \"Live\" and \"Readme\"). OK for me to delete them?",["Yes, delete them","No, keep them"]);
+textQ(L,"known_wrong","Anything on your website or listings you already know is wrong?",{long:true});
+
+// PROGRESS
+function filled(k){
+  if(k==="barbers") return S.barbers.some(b=>(b.name||"").trim());
+  const v=S[k]; if(Array.isArray(v)) return v.length>0; if(typeof v==="boolean") return v; return !!(v&&String(v).trim()) || !!(S[k+"_x"]&&S[k+"_x"].trim());
+}
+function progress(){
+  const n=COUNTED.length, d=COUNTED.filter(filled).length;
+  $("done").textContent=d; $("total").textContent=n; $("fill").style.width=(n?Math.round(100*d/n):0)+"%";
+  $("out").textContent=compile();
+}
+
+// OUTPUT
+function v(k){return (S[k]&&String(S[k]).trim())||""}
+function line(label,val){return label+": "+(val||"(blank)")}
+function compile(){
+  const o=["SKIP'S BARBERSHOP - INFO SHEET ANSWERS",""];
+  o.push("STEP 1 - ACCESS");
+  [["acc_sq","Website Administrator invite sent"],["acc_gsb","Google South Boston Manager invite sent"],["acc_gse","Google South End Manager invite sent"],["acc_gpvd","Google Providence Manager invite sent"],["acc_yelp","Yelp invite sent"],["acc_apple","Apple Maps"],["acc_squire","Squire"],["acc_track","Visit tracking OK"]].forEach(([k,l])=>o.push("["+(S[k]?"x":" ")+"] "+l+(v(k+"_note")?" - "+v(k+"_note"):"")));
+  o.push("","STEP 2 - FACTS");
+  const ch=(k)=>[v(k),v(k+"_x")].filter(Boolean).join(" - ");
+  o.push(line("Name spelling",ch("name")),line("Owner as shown",v("owner")),line("Year opened",v("year")),line("Story behind the name",v("story")),line("Providence in scope",v("providence")),line("Providence phone",v("pvd_phone")),line("Phones correct",ch("phones_ok")),line("Customer email",ch("email_ok")),line("Squire for all shops",ch("squire_all")));
+  o.push("","STEP 3 - HOURS");
+  SHOPS.forEach(([k,n])=>{o.push(n+":");DAYS.forEach(d=>o.push("  "+d+": "+(v("h_"+k+"_"+d.slice(0,3).toLowerCase())||"(blank)")));if(v("hol_"+k))o.push("  Holidays: "+v("hol_"+k))});
+  o.push("","STEP 4 - PRICES");
+  PR.forEach(([n,p],i)=>{const k="p"+i;const st=S[k]==="Correct"?"correct ("+p+")":S[k]==="Different"?"different: "+(v(k+"_fix")||"(no price typed)"):"(blank)";const same=S[k+"_same"]==="yes"?"same at every shop":S[k+"_same"]==="no"?"differs by shop":"";o.push(n+" - Squire "+p+": "+st+(same?"; "+same:""))});
+  o.push(line("Other services",v("other_services")));
+  o.push("","STEP 5 - Q&A");
+  FAQ.forEach((q,i)=>o.push((i+1)+". "+q,"   "+(v("faq"+(i+1))||"(blank)")));
+  o.push("","STEP 6 - ABOUT");
+  o.push(line("In my words",v("own_words")));
+  const bs=S.barbers.filter(b=>(b.name||"").trim()); o.push("Barbers:"+(bs.length?"":" (blank)")); bs.forEach(b=>o.push("  "+[b.name,b.shop,b.known,b.years&&(b.years+" yrs")].filter(Boolean).join(" | ")));
+  o.push(line("Press or awards",v("press")));
+  o.push("","STEP 7 - LISTINGS");
+  o.push(line("Accounts",[(S.accounts||[]).join(", "),v("accounts_x")].filter(Boolean).join(", ")),line("Old listings to close",v("old_listings")),line("Delete template pages",v("template")),line("Known wrong",v("known_wrong")));
+  return o.join("\n");
+}
+progress();
+$("mailLink").addEventListener("click",()=>{ $("mailLink").href="mailto:ben@pickme-ai.com?subject="+encodeURIComponent("Skip's info sheet answers")+"&body="+encodeURIComponent(compile()) });
+
+function status(msg,warn){const s=$("sendStatus");s.hidden=false;s.className="status"+(warn?" warn":"");s.textContent=msg}
+$("copyEmail").addEventListener("click",()=>{const b=$("copyEmail");try{navigator.clipboard.writeText("ben@pickme-ai.com").then(()=>{b.textContent="Copied"},()=>{})}catch(e){}});
+$("copyBtn").addEventListener("click",()=>{
+  const t=compile();
+  const done=()=>status("Copied. Now reply to Ben's email and paste.");
+  try{navigator.clipboard.writeText(t).then(done,()=>{fallback(t)})}catch(e){fallback(t)}
+});
+function fallback(t){const d=document.querySelector("details");d.open=true;const r=document.createRange();r.selectNodeContents($("out"));const sel=getSelection();sel.removeAllRanges();sel.addRange(r);status("Selected. Tap Copy on your phone, then paste into a reply to Ben.",true)}
+
+$("sendBtn").addEventListener("click",()=>{
+  const body=compile();
+  location.href="mailto:ben@pickme-ai.com?subject="+encodeURIComponent("Skip's info sheet answers")+"&body="+encodeURIComponent(body);
+  status("Your email app should open with your answers filled in. Tap Send there. If it didn't open, tap Copy my answers and paste them into a text or email to Ben.");
+});
+})();
+</script>
+
+</body></html>
