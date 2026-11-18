@@ -20,6 +20,30 @@
     else if (h.indexOf('tel:') === 0) gtag('event', 'generate_lead', {lead_type: 'phone_click', link_url: h});
   }, true);
 </script>
+<!-- Meta Pixel (dataset 1887647025942392, PickMe AI business portfolio): counts page views for Facebook/Instagram ads,
+     plus a Lead event on the same three clicks GA4 tracks (Calendly booking, email, phone). No personal data is sent. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1887647025942392');
+fbq('track', 'PageView');
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+  if (!a || !window.fbq) return;
+  var h = a.getAttribute('href') || '';
+  if (h.indexOf('calendly.com') !== -1) fbq('track', 'Lead', {content_name: 'book_free_check'});
+  else if (h.indexOf('mailto:') === 0) fbq('track', 'Contact', {content_name: 'email_click'});
+  else if (h.indexOf('tel:') === 0) fbq('track', 'Contact', {content_name: 'phone_click'});
+}, true);
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1887647025942392&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel -->
 <title>AEO vs SEO vs GEO: what is the difference? | PickMe AI</title>
 <meta name="description" content="SEO, AEO and GEO in plain words: what each one means, what each looks at, and how to tell whether AI tools are naming your business.">
 <link rel="canonical" href="https://pickme-ai.com/blog/aeo-vs-seo-vs-geo/">
