@@ -39,6 +39,8 @@
         "https://web.getsquire.com/book/skips-barbershop-south-end-boston"
       ],
       "telephone": "+1-617-982-7981",
+      "image": "https://images.squarespace-cdn.com/content/v1/619ed20009495b7cde066b93/1637799435432-UDQXU1IBRTPG6VWZNNDG/unnamed-3.jpg",
+      "priceRange": "$41-$150",
       "email": "skipsbarbershopboston@gmail.com",
       "paymentAccepted": "Cash, card, Apple Pay, Venmo",
       "areaServed": [
