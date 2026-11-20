@@ -28,7 +28,6 @@
         }
       ],
       "sameAs": [
-        "https://www.facebook.com/skipsbarbershop",
         "https://www.instagram.com/skipsbarbershop"
       ]
     },
