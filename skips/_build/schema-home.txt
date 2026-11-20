@@ -1,0 +1,157 @@
+<!-- PickMe AI: labels for AI tools and search, page /. Facts from the owner, 2026-11-19. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.skipsbarbershop.com/#org",
+      "name": "Skip's Barbershop",
+      "alternateName": "Skips Barbershop",
+      "url": "https://www.skipsbarbershop.com/",
+      "description": "Skip's Barbershop is your local Barbershop with a comfortable and welcoming feel and high-end execution and attention to detail",
+      "foundingDate": "1906",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "South Boston, Massachusetts"
+      },
+      "email": "skipsbarbershopboston@gmail.com",
+      "subOrganization": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-boston"
+        },
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        },
+        {
+          "@id": "https://www.skipsbarbershop.com/#providence"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/skipsbarbershop",
+        "https://www.instagram.com/skipsbarbershop"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.skipsbarbershop.com/#website",
+      "url": "https://www.skipsbarbershop.com/",
+      "name": "Skip's Barbershop",
+      "publisher": {
+        "@id": "https://www.skipsbarbershop.com/#org"
+      }
+    },
+    {
+      "@type": "HairSalon",
+      "@id": "https://www.skipsbarbershop.com/#south-boston",
+      "name": "Skip's Barbershop - South Boston",
+      "url": "https://www.skipsbarbershop.com/south-boston",
+      "parentOrganization": {
+        "@id": "https://www.skipsbarbershop.com/#org"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "78 Dorchester St",
+        "addressLocality": "Boston",
+        "addressRegion": "MA",
+        "postalCode": "02127",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.335779,
+        "longitude": -71.0449133
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://web.getsquire.com/book/skips-barbershop-south-boston-boston"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Barbershop appointment"
+        }
+      },
+      "sameAs": [
+        "https://web.getsquire.com/book/skips-barbershop-south-boston-boston"
+      ],
+      "telephone": "+1-617-269-2227"
+    },
+    {
+      "@type": "HairSalon",
+      "@id": "https://www.skipsbarbershop.com/#south-end",
+      "name": "Skip's Barbershop - South End",
+      "url": "https://www.skipsbarbershop.com/south-end",
+      "parentOrganization": {
+        "@id": "https://www.skipsbarbershop.com/#org"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "603 Tremont St",
+        "addressLocality": "Boston",
+        "addressRegion": "MA",
+        "postalCode": "02118",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.3431833,
+        "longitude": -71.0735824
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://web.getsquire.com/book/skips-barbershop-south-end-boston"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Barbershop appointment"
+        }
+      },
+      "sameAs": [
+        "https://web.getsquire.com/book/skips-barbershop-south-end-boston"
+      ],
+      "telephone": "+1-617-982-7981"
+    },
+    {
+      "@type": "HairSalon",
+      "@id": "https://www.skipsbarbershop.com/#providence",
+      "name": "Skip's Barbershop - Providence",
+      "url": "https://www.skipsbarbershop.com/providence",
+      "parentOrganization": {
+        "@id": "https://www.skipsbarbershop.com/#org"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "556 Atwells Ave",
+        "addressLocality": "Providence",
+        "addressRegion": "RI",
+        "postalCode": "02909",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.8243789,
+        "longitude": -71.4359339
+      },
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://web.getsquire.com/book/skips-barbershop-providence-providence"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Barbershop appointment"
+        }
+      },
+      "sameAs": [
+        "https://web.getsquire.com/book/skips-barbershop-providence-providence"
+      ],
+      "telephone": "+1-401-308-7547"
+    }
+  ]
+}
+</script>

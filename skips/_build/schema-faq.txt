@@ -1,0 +1,167 @@
+<!-- PickMe AI: labels for AI tools and search, page /faq. Facts from the owner, 2026-11-19. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.skipsbarbershop.com/faq#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you take walk-ins?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we take walk-ins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far ahead should I book? Can I get in the same day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Same-day appointments are possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your cancellation policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have a four-hour cancellation policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do fades, tapers and lineups?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We do fades and tapers (skin, low, mid and high) and lineups."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cut curly or textured hair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we cut curly and textured hair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do longer hair and all-scissor cuts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we do longer hair and all-scissor cuts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you cut kids' hair?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we cut kids' hair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which shaves do you offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer hot towel shaves, head shaves and face shaves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book a beard trim on its own?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can book a beard trim on its own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the nearest T stop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Andrew station is the closest to the South Boston shop. Back Bay station is the nearest to the South End shop. There is no train station near the Providence shop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there parking near the shops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's street parking at all shops."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the shops wheelchair accessible?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Providence shop is wheelchair accessible. The South Boston shop has one step up, but you can get a wheelchair in. The South End shop is in a garden-level brownstone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I pay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can pay with cash, card, Apple Pay or Venmo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer gift cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer gift cards online."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you do weddings and group events?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We love doing group and wedding events. We call them Whiskey and Whiskers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What languages do your barbers speak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mostly English, and some Spanish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What products do you use and sell?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the shelf, Church California is our number one product. We also carry some other products."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.skipsbarbershop.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Questions and answers",
+          "item": "https://www.skipsbarbershop.com/faq"
+        }
+      ]
+    }
+  ]
+}
+</script>

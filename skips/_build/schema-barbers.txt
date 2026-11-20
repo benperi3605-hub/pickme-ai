@@ -1,0 +1,172 @@
+<!-- PickMe AI: labels for AI tools and search, page /barbers. Facts from the owner, 2026-11-19. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#jamal-wiley",
+      "name": "Jamal Wiley",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-boston"
+        }
+      ],
+      "description": "Fades, shaves and amazing scissor work"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#julian-solano",
+      "name": "Julian Solano",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-boston"
+        }
+      ],
+      "description": "Fades, shaves, texture cutting"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#anthony-costa",
+      "name": "Anthony Costa",
+      "jobTitle": "Owner and barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        },
+        {
+          "@id": "https://www.skipsbarbershop.com/#providence"
+        }
+      ],
+      "description": "Fades, straight razor shaves, men's long cuts, textured haircuts"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#paolo-marrero",
+      "name": "Paolo Marrero",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Amazing skin fades, attention to detail, amazing razor work"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#morgan-lanfear",
+      "name": "Morgan Lanfear",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Fades, amazing scissor work, facials, gray camouflage, texture cuts, face shaves"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#roberto-thegenus",
+      "name": "Roberto Thegenus",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Face shaves, fades, traditional haircuts, amazing conversation, reliability"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#lou-rodriguez",
+      "name": "Lou Rodriguez",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Fades, amazing long hair, texture cuts, shaves, hot towel and steam"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#joey-smith",
+      "name": "Joey Smith",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Amazing haircuts including fades, men's regulars, long hair, straight razor shaves, gray camouflage, facials"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#marc-jacob",
+      "name": "Marc Jacob",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Fades, razor finishes, long hair and attention to detail"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#christopher-beasley",
+      "name": "Christopher Beasley",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#south-end"
+        }
+      ],
+      "description": "Fades, men's regulars, and taking his time on cuts"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#nick-guglielmi",
+      "name": "Nick Guglielmi",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#providence"
+        }
+      ],
+      "description": "Fades, wolf cuts, long texture, beard services and scissor work"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.skipsbarbershop.com/barbers#jerry-w",
+      "name": "Jerry W",
+      "jobTitle": "Barber",
+      "worksFor": [
+        {
+          "@id": "https://www.skipsbarbershop.com/#providence"
+        }
+      ],
+      "description": "Fades, facials, face shaves; a master of our Executive Service, including hot towel and steam"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.skipsbarbershop.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Barbers",
+          "item": "https://www.skipsbarbershop.com/barbers"
+        }
+      ]
+    }
+  ]
+}
+</script>

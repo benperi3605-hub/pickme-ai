@@ -1,0 +1,35 @@
+<!-- PickMe AI: labels for AI tools and search, page /whiskey-and-whiskers. Facts from the owner, 2026-11-19. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.skipsbarbershop.com/whiskey-and-whiskers#service",
+      "name": "Whiskey and Whiskers",
+      "serviceType": "Wedding and group grooming",
+      "description": "We love doing group and wedding events. We call them Whiskey and Whiskers.",
+      "provider": {
+        "@id": "https://www.skipsbarbershop.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.skipsbarbershop.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Whiskey and Whiskers",
+          "item": "https://www.skipsbarbershop.com/whiskey-and-whiskers"
+        }
+      ]
+    }
+  ]
+}
+</script>

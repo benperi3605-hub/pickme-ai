@@ -1,0 +1,167 @@
+<!-- PickMe AI: labels for AI tools and search, page /services. Facts from the owner, 2026-11-19. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.skipsbarbershop.com/services",
+      "name": "Services and prices",
+      "about": {
+        "@id": "https://www.skipsbarbershop.com/#org"
+      },
+      "mainEntity": {
+        "@type": "OfferCatalog",
+        "name": "Skip's Barbershop services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Classic Cut",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "56",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Buzz Cut / Kids / Senior",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "41",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Scissors Cut",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "77",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Beard Trim (No Shave)",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "47",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Classic Cut + Beard Trim",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "78",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Deluxe Cut + Beard (with Shave)",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "100",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Deluxe Cut + Face Shave",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "100",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Executive Service (90 mins)",
+              "provider": {
+                "@id": "https://www.skipsbarbershop.com/#org"
+              }
+            },
+            "price": "150",
+            "priceCurrency": "USD",
+            "areaServed": [
+              "South Boston",
+              "South End"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.skipsbarbershop.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services and prices",
+          "item": "https://www.skipsbarbershop.com/services"
+        }
+      ]
+    }
+  ]
+}
+</script>
