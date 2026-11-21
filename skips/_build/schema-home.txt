@@ -16,6 +16,10 @@
         "name": "South Boston, Massachusetts"
       },
       "email": "skipsbarbershopboston@gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Skip Scaro"
+      },
       "subOrganization": [
         {
           "@id": "https://www.skipsbarbershop.com/#south-boston"
