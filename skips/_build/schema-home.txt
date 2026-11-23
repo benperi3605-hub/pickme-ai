@@ -7,7 +7,10 @@
       "@type": "Organization",
       "@id": "https://www.skipsbarbershop.com/#org",
       "name": "Skip's Barbershop",
-      "alternateName": "Skips Barbershop",
+      "alternateName": [
+        "Skips Barbershop",
+        "Skip Scaro's Barber Shop"
+      ],
       "url": "https://www.skipsbarbershop.com/",
       "description": "Skip's Barbershop is your local Barbershop with a comfortable and welcoming feel and high-end execution and attention to detail",
       "foundingDate": "1906",
