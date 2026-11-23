@@ -647,6 +647,21 @@ img, svg { max-width: 100%; }
 .plat li { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 12px 22px; font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; }
 .plat li.plat__more { background: transparent; border-style: dashed; color: var(--ink-3); font-weight: 500; }
 
+/* Proof (case study) */
+.proof { display: grid; gap: 28px; align-items: center; }
+.proof__q { font-size: 1.0625rem; color: var(--ink-2); margin: 0 0 16px; }
+.proof__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.proof__card { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; background: var(--paper); min-width: 0; }
+.proof__card--after { background: var(--navy); border-color: var(--navy); color: var(--on-dark); }
+.proof__label { display: block; font-family: var(--font-mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px; }
+.proof__card--after .proof__label { color: var(--on-dark-2); }
+.proof__val { font-weight: 600; font-size: 1.0625rem; }
+.proof__why { margin: 16px 0 0; color: var(--ink-2); }
+.proof__note { margin: 6px 0 0; font-size: .8125rem; color: var(--ink-3); }
+.proof__shot { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(11,18,32,.08); }
+.proof__shot img { display: block; width: 100%; height: auto; }
+@media (min-width: 900px) { .proof { grid-template-columns: 1fr 1.1fr; gap: 56px; } }
+
 /* FAQ */
 .faq__layout { display: grid; gap: 32px; }
 .faq { border-top: 1px solid var(--line); min-width: 0; }
@@ -999,6 +1014,28 @@ img, svg { max-width: 100%; }
         <li data-reveal>Muse</li>
         <li class="plat__more" data-reveal>+ what launches next</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Proof: S P Agency (preview, not live) -->
+  <section class="section" id="proof" aria-labelledby="proof-title">
+    <div class="wrap proof">
+      <div>
+        <div class="section-head" style="margin-bottom:24px">
+          <p class="eyebrow">Proof &middot; S P Agency, Cincinnati</p>
+          <h2 id="proof-title">ChatGPT names our client.</h2>
+        </div>
+        <p class="proof__q">&ldquo;Best high net worth insurance agency in Cincinnati&rdquo;</p>
+        <div class="proof__pair">
+          <div class="proof__card"><span class="proof__label">Nov 6</span><span class="proof__val">Named #2, 1 of 2 chats</span></div>
+          <div class="proof__card proof__card--after"><span class="proof__label">Nov 23</span><span class="proof__val">Named #2, 2 of 2 chats</span></div>
+        </div>
+        <p class="proof__why">People now ask ChatGPT who to hire. Being named matters.</p>
+        <p class="proof__note">ChatGPT, logged out, temporary chat.</p>
+      </div>
+      <figure class="proof__shot">
+        <img src="/img/sp-agency-chatgpt-2026-11-23.jpg" width="1200" height="800" loading="lazy" alt="ChatGPT answer, logged out, Nov 23 2026: S.P. Agency, Inc. listed #2 for Best high net worth insurance agency in Cincinnati">
+      </figure>
     </div>
   </section>
 
